@@ -25,6 +25,10 @@ jobs:
           # 缓存 npm 依赖
           cache: npm
 
+      # 下载依赖
+      - name: Npm install module
+        run: npm install
+
       # 运行构建脚本
       - name: Build VuePress site
         run: npm run docs:build
