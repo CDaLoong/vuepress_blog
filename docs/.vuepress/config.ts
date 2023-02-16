@@ -4,7 +4,7 @@ import { defaultTheme } from "vuepress";
 
 export default defineUserConfig({
   base: "/vuepress_blog/",
-  head: [["link", { rel: "icon", href: "/images/c.png" }]],
+  head: [["link", { rel: "icon", href: "/vuepress_blog/images/c.png" }]],
   pagePatterns: ["**/*.md", "!**/README.md", "!.vuepress", "!node_modules"],
   locales: {
     "/zh/": {
