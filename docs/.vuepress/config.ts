@@ -7,7 +7,7 @@ export default defineUserConfig({
   head: [["link", { rel: "icon", href: "/vuepress_blog/images/c.png" }]],
   pagePatterns: ["**/*.md", "!**/README.md", "!.vuepress", "!node_modules"],
   locales: {
-    "/zh/": {
+    "/": {
       lang: "zh-CN",
       title: "",
       description: "DaLoong的博客",
@@ -24,7 +24,7 @@ export default defineUserConfig({
       "/en/": {
         selectLanguageName: "English",
       },
-      "/zh/": {
+      "/": {
         selectLanguageName: "简体中文",
       },
     },
@@ -45,107 +45,95 @@ export default defineUserConfig({
     sidebar: [
       // SidebarItem
       {
+        text: "首页",
+        link: "/",
+      },
+      {
         text: "学习笔记",
+        collapsible: true,
         // link: "/blog/",
         children: [
           {
             text: "模块化学习",
             collapsible: true,
-            // link: "/zh/note/模块化学习.md",
-            children: ["/zh/note/模块化学习.md"],
+            children: ["/note/模块化学习.md"],
           },
           {
             text: "包管理器学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/包管理器学习.md"],
+            children: ["/note/包管理器学习.md"],
           },
           {
             text: "算法学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/算法学习.md"],
+            children: ["/note/算法学习.md"],
           },
           {
             text: "网络知识学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/网络知识学习.md"],
+            children: ["/note/网络知识学习.md"],
           },
           {
             text: "网络学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/网络学习.md"],
+            children: ["/note/网络学习.md"],
           },
           {
             text: "CSS3学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/CSS3学习.md"],
+            children: ["/note/CSS3学习.md"],
           },
           {
             text: "ES6学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/ES6学习.md"],
+            children: ["/note/ES6学习.md"],
           },
           {
             text: "git学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/git学习.md"],
+            children: ["/note/git学习.md"],
           },
           {
             text: "HTML5学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/HTML5学习.md"],
+            children: ["/note/HTML5学习.md"],
           },
           {
             text: "HTNL+CSS基础学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/HTNL+CSS基础学习.md"],
+            children: ["/note/HTNL+CSS基础学习.md"],
           },
           {
             text: "JS基础学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/JS基础学习.md"],
+            children: ["/note/JS基础学习.md"],
           },
           {
             text: "JS正则加bom和dom学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/JS正则加bom和dom学习.md"],
+            children: ["/note/JS正则加bom和dom学习.md"],
           },
           {
             text: "mysql学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/mysql学习.md"],
+            children: ["/note/mysql学习.md"],
           },
           {
             text: "NodeJS学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/NodeJS学习.md"],
+            children: ["/note/NodeJS学习.md"],
           },
           {
             text: "vue2学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/vue2学习.md"],
+            children: ["/note/vue2学习.md"],
           },
           {
             text: "webpack学习",
             collapsible: true,
-            // link: "/zh/note/包管理器学习.md",
-            children: ["/zh/note/webpack学习.md"],
+            children: ["/note/webpack学习.md"],
           },
         ],
-        // children: ["/zh/note/模块化学习.md", "/zh/note/包管理器学习.md"],
       },
     ],
   }),
