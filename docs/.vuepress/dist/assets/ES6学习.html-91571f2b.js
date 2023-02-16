@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-54de97c1","path":"/zh/note/ES6%E5%AD%A6%E4%B9%A0.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1676461002000,"contributors":[{"name":"DaLoong","email":"CDaLoong@gmail.com","commits":1}]},"filePathRelative":"zh/note/ES6学习.md"}');export{t as data};

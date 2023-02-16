@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-4d745686","path":"/zh/note/JS%E6%AD%A3%E5%88%99%E5%8A%A0bom%E5%92%8Cdom%E5%AD%A6%E4%B9%A0.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1676461002000,"contributors":[{"name":"DaLoong","email":"CDaLoong@gmail.com","commits":1}]},"filePathRelative":"zh/note/JS正则加bom和dom学习.md"}');export{t as data};

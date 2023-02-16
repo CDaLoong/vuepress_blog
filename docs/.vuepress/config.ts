@@ -3,8 +3,8 @@ import { defaultTheme } from "vuepress";
 // import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
-  base: "/blog/",
-  head: [["link", { rel: "icon", href: "/blog/images/c.png" }]],
+  base: "/",
+  head: [["link", { rel: "icon", href: "/images/c.png" }]],
   pagePatterns: ["**/*.md", "!**/README.md", "!.vuepress", "!node_modules"],
   locales: {
     "/zh/": {

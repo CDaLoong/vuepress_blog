@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-416d6afe","path":"/zh/note/JS%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1676461002000,"contributors":[{"name":"DaLoong","email":"CDaLoong@gmail.com","commits":1}]},"filePathRelative":"zh/note/JS基础学习.md"}');export{t as data};
