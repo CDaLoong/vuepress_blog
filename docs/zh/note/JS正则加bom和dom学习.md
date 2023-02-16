@@ -128,7 +128,7 @@
    -  单引号 '' 
    -  双引号 "" 
    -  ``，模板字符串,可以在字符串中换行
-```
+```js
  console.log(`hellow
  word!`);
 ```
@@ -163,7 +163,7 @@
 - **凡是出现对象字面量（{} 这个大括号就是对象字面量）的位置，都一定在内存出现一个新的对象内存**
 - 变量的互相赋值，一定是复制粘贴，如果是对象，会指向同一个存放对象内容的内存空间，有一个对象更改里边的属性或属性值，就会建立一个新的内存空间，然后两个对象指向新的内存空间，原有的内存空间还在，只是不被指向了，也就是说一个对象变另一个对象跟着变
 - **引用类型的变量，存放的是内存地址**
-```javascript
+```js
 var obj1 = {
   name: "asd",
   sub:{
@@ -204,7 +204,7 @@ console.log(obj1.sub.s1,obj2.sub.s1,pr.s1); // asd asd abc
 ## 如何使用变量
 
 - 声明（定义）变量
-```javascript
+```js
 var 变量名; var 0;
 var "asd";
 var a = 10;//将右边的东西存放到变量a中
@@ -257,8 +257,8 @@ console.log(typeof pad);//输出变量pad的类型
 ### 在变量中存放对象
 
 - 通过变量，读取对象中的某个属性
-```javascript
-变量名.属性名
+```js
+// 变量名.属性名
 ```
 
    - **当读取的属性不存在时，会得到undefined**
@@ -266,7 +266,7 @@ console.log(typeof pad);//输出变量pad的类型
 - 通过变量，更改对象中的某个属性
    - **当赋值的属性不存在时，会添加属性**
 - 删除属性
-```javascript
+```js
 delete 变量名.属性名;
 delete xiaoZhang.girlFriend;
 xiaoMing.girlFriend = undefined;
@@ -274,13 +274,13 @@ xiaoMing.girlFriend = undefined;
 
 - 属性表达式
    - 给属性赋值，或读取属性时，可以使用下面的格式操作
-```javascript
-对象变量["属性名"]
+```js
+// 对象变量["属性名"]
 console.log(xiaoMing["age"]);
-里边填的是一个字符串
+// 里边填的是一个字符串
 ```
 应用于包含特殊字符的属性名：
-```javascript
+```js
 console.log(xiaoMing["？dsf—_!!@sf"]);
 var xiaoZhang = {
   name:"zhangDaShan",
@@ -306,7 +306,7 @@ console.log(xiaoMing[prop]);    // man
   主要有以下区别：
    - []：可以用变量作为属性名或访问，而点方法不可以
       - 优点：可以通过变量来访问属性
-```javascript
+```js
 var obj = {};
 obj.name = '张三';
 var myName = 'name';
@@ -325,7 +325,7 @@ console.log(person[propertyName2]);  //undefined
 ```
 
    - [] 中括号法：可以用数字作为属性名，而点语法不可以;
-```javascript
+```js
 var obj1={};
 //    obj1.1=1;//Unexpected number
 obj1[2]=2;
@@ -337,7 +337,7 @@ console.log(obj1)//{2: 2}
 
    - []：可以动态访问的属性名，可以在程序运行时创建和修改属性，点操作符就不行，
       - 即 [] 可以动态设置和获取
-```javascript
+```js
 var customer={};
 var addr=['北京','上海','广州','深圳'];
 for(i=0;i<4;i++){
@@ -354,7 +354,7 @@ console.log(str);
 
    - 如果属性名中包含会导致语法错误的字符，或者属性名是关键字或者保留字，也可以使用方括号表示法
       - 如：属性名是关键字或者保留字都可以，点语法不严密，不报错，写法提示有错
-```javascript
+```js
 person['first name'] ='gogo2';  //first name包含一个空格
 console.log(person['first name']);
 //    console.log(person.first name)//书写都通不过
@@ -405,16 +405,16 @@ console.log(arr1.myDistinct());//[3, "a", 4, 5, "b"]
 - 操作数：参与运算的数据，也称之为“元”
 - 操作符不一定只有一个符号，（）  ++  -- ...
 - 操作符出现在不同的位置，可能具有不同的含义
-```javascript
-1-2; 减
--1.2;负数
+```js
+// 1-2; 减
+// -1.2; 负数
 ```
 
 - 目前接触的操作符：
    - `=`：赋值符号，将右边的数据赋值给左边
    - `.`: 访问符号，用于访问对象的属性
    - `[]`：访问符号，用于访问对象的属性
-```javascript
+```js
 var obj = {
 a: 123
 }
@@ -522,7 +522,7 @@ console.log(a+{}+123);
 x: 将变量x自增1，得到的表达式的值是自增之后的值，先再赋值（先运算后取值）：a = 1，b；    b = a，先a再赋值给b，即b=2，a=2。
 - x--: 将变量x自减1，得到的表达式的值是自减之前的值。与一样
 - --x: 将变量x自减1，得到的表达式的值是自减之后的值。与一样
-```javascript
+```js
 var a = 1,
 b;
 b = a++;
@@ -662,7 +662,7 @@ Infinity比任何数字都大
 一元运算符
 
 将数据的boolean判定结果直接取反，非运算符一定返回boolean类型，即!ture返回false，!false返回true
-```
+```js
     // var s = prompt("请输入成绩");
     // document.write(s >= 60 || false);
 
@@ -789,7 +789,7 @@ typeof运算，返回表达式的类型，是一个字符串。
 # 条件判断
 ## if判断
 
-```javascript
+```js
 if(条件1){
     // 代码块
 }
@@ -833,7 +833,7 @@ x=0;
 - 得到一个随机数
 
 3. Math.random() 该表达式返回一个0~1之间的随机数字（无法取到1）
-```
+```js
     // var n = +prompt("请输入一个三位数");
     // if (n >= 100 && n < 1000) {
     //     console.log(n % 13 === 0);
@@ -948,7 +948,7 @@ x=0;
 
 switch的语法始终可以使用if结构替代。
 
-```javascript
+```js
 switch(表达式){
     case 数据1:
         代码块
@@ -972,7 +972,7 @@ JS支持3种循环结构：while循环、do-while循环、for循环
 
 ## while循环
 
-```javascript
+```js
 while(条件){
     代码块（循环体）
 }
@@ -984,7 +984,7 @@ while(条件){
 
 ## do-while循环
 
-```javascript
+```js
 do{
     循环体
 } while(条件);
@@ -995,7 +995,7 @@ do{
 
 ## for循环
 
-```javascript
+```js
 for(初始化表达式; 条件; 条件改变表达式){
     循环体
 }
@@ -1027,6 +1027,7 @@ for(初始化表达式; 条件; 条件改变表达式){
 
 分开分析两层循环
 **素数：一个大于1的数，且只能被1和自身整除**记录整除次数即可判断，为2一定是素数
+```js
 var i,
 j,
 s = 0;
@@ -1042,7 +1043,7 @@ console.log(i);
 s = 0;
 }
 
-```
+
     var i,
         j,
         s = 0;
@@ -1058,8 +1059,6 @@ s = 0;
         }
         s = 0;
     }
-```
-```
     // 1. 在控制台中输出100个*
     // var i;
     // for (i = 0; i < 100; i++) {
@@ -1248,7 +1247,7 @@ s = 0;
     // 1*9=9	2*9=18	3*9=27	4*9=36	5*9=45	6*9=54	7*9=63	8*9=72	9*9=81	
     // ```
 
-       <!-- var i,
+     var i,
         j,
         str = "",
         n;
@@ -1261,7 +1260,7 @@ s = 0;
         console.log(str);
         str = "";
 
-    }; -->
+    };
 
     // 15. 将猜拳游戏升级，记录系统和玩家的积分，获胜者加1分，平局和输者不计分
 
@@ -1488,7 +1487,7 @@ console.log(str);-->"1,2,3,4,5,6"
 
 ### for-in  foreach 循环
 
-```javascript
+```js
 for(var prop in 对象){
     //循环体
 }
@@ -1499,7 +1498,7 @@ for-in循环不会遍历稀松数组的属性名（下标），因为稀松数�
 
 for循环获取数组下标的typeof类型为number；
 for in 循环获取数组下标的typeof类型为string；
-
+```js
 var arr = ['a','b','c'];
 for(var i = 0;i < arr.length;i++){
 console.log(typeof(i));//number
@@ -1511,7 +1510,7 @@ for(var j in att){
 console.log(typeof(j));//string
 console.log(att[j]);//a,b,c
 }
-
+```
 for循环不能用于循环对象，因为for循环无法获取obj.length，所以for循环只能用于数组操作；
 for in 循环可以获取对象的键值，可以操作数组，还可操作对象；
 for...in 效率是最低的。这是因为 for...in 有一些特殊的要求，包括：
@@ -1519,7 +1518,7 @@ for...in 效率是最低的。这是因为 for...in 有一些特殊的要求，�
 1. 遍历所有属性，不仅是 own properties 也包括原型链上的所有属性。
 2. 忽略 enumerable 为 false 的属性。
 3. 必须按特定顺序遍历，先遍历所有数字键，然后按照创建属性的顺序遍历剩下的。
-
+```js
 var obj = new Object({
 name:"Simon",
 age:"16",
@@ -1536,9 +1535,9 @@ for(var j in obj){
 console.log(j);//name,age,city
 console.log(obj[j]);//simon,16,BJ
 }
-
+```
 ### 作业
-
+```js
 //         1. 提示用户输入数组的长度，以及数组每一项的值，然后输出该数组
 // var arr = [],
 //     len,
@@ -1553,7 +1552,6 @@ console.log(obj[j]);//simon,16,BJ
 // }
 // console.log(arr);
 
-```
     //    2. 初始化一个数字数组，然后求该数组所有项之和
     // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     //     i,
@@ -1753,7 +1751,7 @@ console.log(obj[j]);//simon,16,BJ
 
 ## 创建（定义、声明）函数
 
-```javascript
+```js
 function 函数名(){
     // 函数体
 }
@@ -1765,8 +1763,8 @@ function 函数名(){
 
 运行函数体
 
-```javascript
-函数名();
+```js
+// 函数名();
 ```
 
 ## 函数提升
@@ -1790,13 +1788,13 @@ function f(){}
 
 参数表示函数运行的未知条件，需要调用者告知的数据
 
-```javascript
+```js
 // 参数的有效返回在函数体中
 function 函数名(形参1, 形参2, ...){
     
 }
 
-函数名(实参)
+// 函数名(实参)
 ```
 
 如果实参没有传递，则对应的形参为undefined
@@ -1813,19 +1811,17 @@ return 后面如果不跟任何数据，返回undefined
 
 ## 文档注释
 
-```javascript
+```js
 /**
  *
  *
 */
 ```
 
-/**
-
 - 判断一个数是不是奇数
 - [@param ](/param ) {number} n 
 - [@reture ](/reture ) {boolean} 
-*/
+```js
 function isOdd(n) {
 return n % 2 !== 0;
 };
@@ -1949,7 +1945,6 @@ return `数组中出现次数最多的数字是${newObj.number},频率是${newOb
 
 //         1. 利用上面的某些函数，实现哥德巴赫猜想
 
-```
     // 任一大于2的偶数都可写成两个质数之和，比如：8 = 3 + 5
 
     // 让用户输入一个大于2的整数，输出其等于哪两个素数相加
@@ -1998,28 +1993,33 @@ JS中，有两种作用域：
 但是，当函数成为一个表达式时，它既不会提升，也不会污染全局对象。
 
 **将函数变为一个函数表达式的方式之一，将函数用小括号括起来。**
+```js
 (function sumOfArray(arr) {
 for (var num = 0, i = 0; i < arr.length; i++) {
 num += arr[i];
 }
 return num;
 })
-然而，这样一来，函数无法通过名称调用。
+// 然而，这样一来，函数无法通过名称调用。
 
-如果书写一个函数表达式，然后将立即调用，该函数称之为**立即执行函数** IIFE（Imdiately Invoked Function Expression）。
+// 如果书写一个函数表达式，然后将立即调用，该函数称之为**立即执行函数** IIFE（Imdiately Invoked Function Expression）。
 (function sumOfArray(arr) {
 for (var num = 0, i = 0; i < arr.length; i++) {
 num += arr[i];
 }
 return num;
-}());      **在函数后面加一个括号然后将函数括起来变为函数表达式**
+}());
+```      
+**在函数后面加一个括号然后将函数括起来变为函数表达式**
 由于大部分情况下，函数表达式的函数名没有实际意义，因此，可以省略函数名。
+```js
 (function (arr) {
 for (var num = 0, i = 0; i < arr.length; i++) {
 num += arr[i];
 }
 return num;
 }());
+```
 没有名字的函数，称之为匿名函数，只有在函数表达式里的函数可以省略函数名
 
 ### 作用域中可以使用的变量
@@ -2057,10 +2057,10 @@ JS中，函数是一等公民
 2） 通过一个对象的属性调用，格式为`对象.属性()`或`对象["属性"]()`，this指向对象，函数保存在对象的属性中
 
 ### .call()
-
 .call() 方法使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数。
 借用别人的函数来实现自己的功能，把自己的参数传给别人的函数，生成自己的东西
 任何数据都可以使用.call()方法，括号中是this指向：
+```js
 function Person(name, age) {
 this.name = 'deng',
 this.age = 19,
@@ -2075,7 +2075,7 @@ Person.call(this,name,age); //这时Person中的this就指向obj2而不是window
 }
 var obj2 = new obj2()
 console.log(obj2.name,obj2.age,obj2.sex)
-
+```
 ## 构造函数
 
 > 对象中的属性，如果是一个函数，也称该属性为对象的方法
@@ -2089,8 +2089,8 @@ console.log(obj2.name,obj2.age,obj2.sex)
 1. 函数返回一个对象
 2. 构造函数：构造函数专门用于创建对象
 
-```javascript
-new 函数名(参数);
+```js
+// new 函数名(参数);
 ```
 
 如果使用上面的格式创建对象，则该函数叫做构造函数。
@@ -2564,8 +2564,8 @@ return match.toUpperCase().trim();**去掉首字母前的空白字符**
 })
 - search  与正则表达式匹配，始终得到第一个满足条件的第一个的下标
 - match  使用字符串与正则表达式比较匹配
-
-1.  书写一个正则表达式，去匹配一个字符串，得到匹配的次数，和匹配的结果
+```js
+// 1.  书写一个正则表达式，去匹配一个字符串，得到匹配的次数，和匹配的结果
 var s = "ascaffagdadc";
 var reg = /a/g;
 var n = 0,
@@ -2576,8 +2576,8 @@ str += result[0] + "\n";
 }
 str = n + "\n" + str;
 console.log(str)  
-```
- 1. 得到一个字符串中中文字符的数量
+
+ // 1. 得到一个字符串中中文字符的数量
  var s = "很丰富huhda弩弓akhn1563收到add";
  var reg = /[\u4e00-\u9FA5]/g;
  var n = 0;
@@ -2586,9 +2586,9 @@ console.log(str)
  }
  console.log(n);
 
- 1. 过滤敏感词， 有一个敏感词数组， 需要将字符串中出现的敏感词替换为四个星号
+ // 1. 过滤敏感词， 有一个敏感词数组， 需要将字符串中出现的敏感词替换为四个星号
 
-    ["共产党", "too young too simple", "营销"]
+   //  ["共产党", "too young too simple", "营销"]
     var str = "中国共产党是一个很伟大的政党，但有一些国外的媒体营销号恶意诋毁中国共产党共产党，这样做是很可耻的，too young too simpletoo young too simple";
    var sensitive = ["共产党", "too young too simple", "营销"]
    var rep = "****";
@@ -2605,21 +2605,21 @@ console.log(str)
 ### 捕获组
 
 1. 用小括号包裹的部分叫做捕获组，捕获组会出现在匹配结果中
-
+```js
 var reg = /(\d[a-z])([a-z]+)/g;
 var str = "65asd7ad1ad7asxf3asd";
 while(result = reg.exec(str)){
 console.log(result);
 }
-得到：  这里的1对应的5a便是捕获组
-0: "5asd"
-1: "5a"
-2: "sd"
-index: 1
-input: "65asd7ad1ad7asxf3asd"
-groups: undefined
-length: 2
-...
+// 得到：  这里的1对应的5a便是捕获组
+// 0: "5asd"
+// 1: "5a"
+// 2: "sd"
+// index: 1
+// input: "65asd7ad1ad7asxf3asd"
+// groups: undefined
+// length: 2
+// ...
 
 var str = "2016-6-15, 2013-5-18, 2019-7-30";
 var reg = /(\d{4})-(\d{1,2})-(\d{1,2})/g;
@@ -2627,7 +2627,7 @@ s = str.replace(reg, function (match, g1, g2, g3) {
 return `${g1}/${g2}/${g3}`;    g1/g2/g3 为三个捕获组
 })
 console.log(s);
-
+```
 1. 捕获组可以命名，叫做具名捕获组
 
 var reg = /(?<数字>\d[a-z])([a-z]+)/g;
@@ -2643,23 +2643,25 @@ var reg = /(?:\d[a-z])([a-z]+)/g;
 在正则表达式中，使用某个捕获组，\捕获组编号
 在正则表达式后加  \要使用的捕获组下标
 下边的例子以下标1为例
-
+```js
 var s = "aaaaaasssssddddfgggghhhhhjkkkkk";
 //找出字符串中连续出现的字符
 var reg = /(\w)\1+/g;
 while(result = reg.exec(s)){
 console.log(result[1])
 }
-
+```
 - 也可以使用名字：
+```js
 var reg = /(?\w)\k+/g;
-
+```
 ### 正向断言(预查)
 
 检查某个字符后面的字符是否**满足**某个规则，该规则不成为匹配结果，并且不称为捕获组
 在括号里加 ?=
+```js
 var reg = /[a-zA-Z](?=%5Cd+)/g;
-后边有行，没有不行
+// 后边有行，没有不行
 var str = "65asd7ad1ad7asxf3asd";
 var reg = /[a-zA-Z](?=%5Cd+)/g;
 while(result = reg.exec(str)){
@@ -2670,11 +2672,12 @@ var n = "1234567890";
 result 1,234,567,890
 var reg = /\B(?=(\d{3})+$)/g;
 console.log(n.replace(reg,","))
-
+```
 ### 负向断言(预查)
 
 检查某个字符后面的字符是否**不满足**某个规则，该规则不成为匹配结果，并且不称为捕获组
 在括号里加 ?!
+```js
 var reg = /[a-zA-Z](?!%5Cd+)/g;
 
 var s = "asd5712612ag71125o85dff22";
@@ -2682,7 +2685,7 @@ result a s a d f   后边有不行，没有行
 var reg = /[a-zA-Z](?!%5Cd+)/g;
 while(result = reg.exec(s)){
 console.log(result);
-
+```
 # 错误处理
 
 JS中的错误分为：
@@ -2703,15 +2706,15 @@ JS中的错误分为：
 
 错误在js中本质上是一个对象，抛出错误的语法为：
 
-```javascript
-throw 错误对象;
+```js
+// throw 错误对象;
 ```
 
 错误对象的构造函数为Error
 
 ## 捕获错误
 
-```javascript
+```js
 try{
     //代码块1
 }
@@ -2772,7 +2775,7 @@ dom对象又称之为dom节点Node
 - DocumentFragment，文档片段节点
 
 dom树：文档中不同的节点形成的树形结构。
-![](DOM%E6%A0%91.jpg#id=AjrI5&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+<!-- ![](DOM%E6%A0%91.jpg#id=AjrI5&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) -->
 
 # 获取dom节点
 
@@ -2832,8 +2835,8 @@ dom 0 时期规定：
 - firstChild：获取第一个子节点
 - lastChild：获取最后一个子节点
 - attributes: 获取某个元素的属性节点
-![](%E8%8A%82%E7%82%B9%E5%85%B3%E7%B3%BB%E5%9B%BE.jpg#id=i8RYB&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![](%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B.jpg#id=Akc1n&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+<!-- ![](%E8%8A%82%E7%82%B9%E5%85%B3%E7%B3%BB%E5%9B%BE.jpg#id=i8RYB&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B.jpg#id=Akc1n&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) -->
 
 获取元素节点
 
@@ -3063,7 +3066,7 @@ div.dataset.abc === "123",省去了data-
 
 事件冒泡：先触发最里层的元素，然后再依次触发外层元素
 事件捕获：先触发外层的元素，然后再依次触发里面元素
-![](%E4%BA%8B%E4%BB%B6%E6%B5%81.jpg#id=YCWrC&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+<!-- ![](%E4%BA%8B%E4%BB%B6%E6%B5%81.jpg#id=YCWrC&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) -->
 
 目前，标准规定，默认情况下，事件是冒泡的方式触发。
 
@@ -3128,7 +3131,7 @@ console.log(e)
 } -->
 - 旧版本的IE浏览器通过window.event获取
 
-```javascript
+```js
  div.onclick = function(e){
             // console.log(e)
             console.log(window.event)
@@ -3220,10 +3223,10 @@ console.log(e.eventPhase)
    - 2：右键
 
 位置：原点在左上角
-![](./%E5%B0%BA%E5%AF%B81.png#id=tfLUA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+<!-- ![](./%E5%B0%BA%E5%AF%B81.png#id=tfLUA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![](./%E5%B0%BA%E5%AF%B82.png#id=Uqcr2&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![](./%E5%B0%BA%E5%AF%B83.png#id=yxfvv&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![](./%E5%B0%BA%E5%AF%B84.jpg#id=JQxIA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](./%E5%B0%BA%E5%AF%B84.jpg#id=JQxIA&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) -->
 
 - page：pageX、pageY，当前鼠标距离页面的横纵坐标，页面最左边和最上边
 - client可视窗口的宽高: clientX、clientY，鼠标相对于视口的坐标
@@ -3246,7 +3249,7 @@ inp.onkeydown = function(){
 return:false;
 }
 
-```javascript
+```js
 window.onkeydown = (e) => {
     if (e.key === "Enter") {
         if (this.timer) {
@@ -3400,7 +3403,7 @@ BOM：Browser Object Model
 - setTimeout方法：指定时间到达后运行某个函数 
    - clearTimeout方法：清除计时器
 
-```javascript
+```js
   timer = setTimeout(function(){
 
   },1000) //这里是1000毫秒，也就是1秒，隔一秒之后运行
@@ -3409,11 +3412,6 @@ BOM：Browser Object Model
 clearTimeout(timer);清除定时器
 
 - setInterval方法：指定间隔时间到达后运行某个函数
-
-```javascript
-
-  },1000) //这里是每隔1秒后运行一次
-```
 
 - clearInterval方法：清除计时器
 
@@ -3440,13 +3438,13 @@ document.write
 
 href属性：得到目前地址
 其他属性参考location.jpg
-![](./location.jpg#id=HKZPd&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+<!-- ![](./location.jpg#id=HKZPd&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) -->
 
 reload方法：刷新当前页面
 window.location.reload();刷新当前页面
 
 -  navigator
-![](navigator.jpg#id=dY3V7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) 
+<!-- ![](navigator.jpg#id=dY3V7&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)  -->
 -  history：历史记录 
 
 go()方法,即可前进也可后退
@@ -3472,12 +3470,12 @@ tiem("")方法和timeEnd("")方法：用于计时
    - 函数中可以有属性
 - 所有对象都是引用类型
 
-![](./%E5%9B%BE%E4%BE%8B/%E5%87%BD%E6%95%B0%E6%98%AF%E9%80%9A%E8%BF%87new%20Function%E5%88%9B%E5%BB%BA%E7%9A%84.jpg#id=iLQ1r&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+<!-- ![](./%E5%9B%BE%E4%BE%8B/%E5%87%BD%E6%95%B0%E6%98%AF%E9%80%9A%E8%BF%87new%20Function%E5%88%9B%E5%BB%BA%E7%9A%84.jpg#id=iLQ1r&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![](./%E5%9B%BE%E4%BE%8B/%E5%8E%9F%E5%9E%8B%E4%B8%AD%E7%9A%84constructor%E6%8C%87%E5%90%91%E5%87%BD%E6%95%B0%E6%9C%AC%E8%BA%AB.jpg#id=fCLuG&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![](./%E5%9B%BE%E4%BE%8B/%E6%99%AE%E9%80%9A%E5%AF%B9%E8%B1%A1%E6%98%AF%E9%80%9A%E8%BF%87new%20%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E7%9A%84.jpg#id=PDv1i&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![](./%E5%9B%BE%E4%BE%8B/%E6%AF%8F%E4%B8%AA%E5%87%BD%E6%95%B0%E9%83%BD%E6%9C%89%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1.jpg#id=GQUzS&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 ![](./%E5%9B%BE%E4%BE%8B/%E9%93%BE%E6%9D%A1%E7%9A%84%E5%85%A8%E8%B2%8C.jpg#id=nNKAb&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-![](./%E5%9B%BE%E4%BE%8B/%E9%9A%90%E5%BC%8F%E5%8E%9F%E5%9E%8B%E7%9A%84%E6%8C%87%E5%90%91.jpg#id=hI2eO&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](./%E5%9B%BE%E4%BE%8B/%E9%9A%90%E5%BC%8F%E5%8E%9F%E5%9E%8B%E7%9A%84%E6%8C%87%E5%90%91.jpg#id=hI2eO&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=) -->
 
 ## 原型 prototype
 
@@ -3530,8 +3528,8 @@ Object.create(null)创建出来的对象没有prototype，因此不是全部对�
 
 **类数组转换为真数组**
 
-```javascript
-Array.prototype.slice.call(类数组);
+```js
+// Array.prototype.slice.call(类数组);
 ```
 
 **实现继承**
