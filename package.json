@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "blog",
   "main": "index.js",
+  "homepage": "https://cdaloong.github.io/vuepress_blog",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
