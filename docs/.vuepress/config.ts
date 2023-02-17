@@ -72,12 +72,6 @@ export default defineUserConfig({
             children: ["/note/算法学习.md"],
           },
           {
-            text: "网络知识学习",
-            collapsible: true,
-            // link: "/note/网络知识学习.md",
-            children: ["/note/网络知识学习.md"],
-          },
-          {
             text: "网络学习",
             collapsible: true,
             // link: "/note/网络学习.md",
@@ -115,12 +109,6 @@ export default defineUserConfig({
           },
           {
             text: "JS基础学习",
-            collapsible: true,
-            // link: "/note/JS基础学习.md",
-            children: ["/note/JS基础学习.md"],
-          },
-          {
-            text: "JS正则加bom和dom学习",
             collapsible: true,
             // link: "/note/JS正则加bom和dom学习.md",
             children: ["/note/JS正则加bom和dom学习.md"],
