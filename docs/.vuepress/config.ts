@@ -45,7 +45,7 @@ export default defineUserConfig({
     sidebar: [
       // SidebarItem
       {
-        text: "首页",
+        text: "程序员的自我修养",
         link: "/",
       },
       {
