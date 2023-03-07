@@ -362,7 +362,7 @@ this.setState(prev => {
 **生命周期仅存在于类组件中，函数组件每次调用都是重新运行函数，旧的组件即刻被销毁，生命周期很短。**
 ### 旧版生命周期
 **React < 16.0.0**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644077095378-43a63e3d-5a0f-486a-a0d0-2f70aee6df46.png#averageHue=%23e59557&clientId=ua5842e8e-95ac-4&from=paste&height=642&id=u191f9cb9&name=image.png&originHeight=1284&originWidth=2292&originalType=binary&ratio=1&rotation=0&showTitle=false&size=285089&status=done&style=none&taskId=ufa2b6dfa-4061-491f-8aaf-c1f836f39e8&title=&width=1146) -->
+![image.png](../.vuepress/public/images/note/react/1.png)
 
 1. constructor 构造函数 初始化阶段
    1. 同一个组件对象只会创建一次
@@ -445,7 +445,7 @@ render() { // 渲染
 ```
 ### 新版生命周期
 **React >= 16.0.0**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643640783631-58a418a1-f872-41c2-a942-3148912b4ef5.png#averageHue=%23e3985a&clientId=u9a0a78dc-f841-4&from=paste&height=593&id=u9845d89f&name=image.png&originHeight=1186&originWidth=2292&originalType=binary&ratio=1&rotation=0&showTitle=false&size=275518&status=done&style=none&taskId=u59b649c8-3695-4441-a0e4-cd1afd3761a&title=&width=1146) -->
+![image.png](../.vuepress/public/images/note/react/2.png)
 主要变化在挂载阶段和更新阶段
 
 - 挂载阶段变化
@@ -1187,7 +1187,7 @@ export default StopPropagation;
    - React 数组节点：该节点由一个数组创建
 - 真实 DOM：通过 document.createElement 创建的 dom 元素
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643642689535-419cda91-a932-4959-b4f9-5bcd135959e7.png#averageHue=%23fefefd&clientId=u9a0a78dc-f841-4&from=paste&height=223&id=u98c419e5&name=image.png&originHeight=446&originWidth=2446&originalType=binary&ratio=1&rotation=0&showTitle=false&size=239538&status=done&style=none&taskId=u798dc1da-d179-4ba4-8bd5-e65d46b1fc4&title=&width=1223) -->
+![image.png](../.vuepress/public/images/note/react/3.png)
 ### 首次渲染(新节点渲染)  render(虚拟元素, 绑定的根结点)
 
 1. 通过参数的值创建节点
@@ -1218,7 +1218,7 @@ const app = <div className="assaf">
 ReactDOM.render(app, document.getElementById('root'));
 ```
 以上代码生成的虚拟 DOM 树：
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643642795259-adac408b-dd59-4263-9b47-0af4bb7e864e.png#averageHue=%23fefefd&clientId=u9a0a78dc-f841-4&from=paste&height=692&id=ub4100959&name=image.png&originHeight=1384&originWidth=2000&originalType=binary&ratio=1&rotation=0&showTitle=false&size=925743&status=done&style=none&taskId=ufd675520-6a5b-4855-9f88-6f0376f9cd5&title=&width=1000) -->
+![image.png](../.vuepress/public/images/note/react/4.png)
 ```jsx
 function Comp1(props) {
     return <h1>Comp1 {props.n}</h1>
@@ -1236,7 +1236,7 @@ const app = <App />;
 ReactDOM.render(app, document.getElementById('root'));
 ```
 以上代码生成的虚拟 DOM 树：
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643642888862-4f1b31c9-8f71-4182-b290-1f122b55b18e.png#averageHue=%23fefefd&clientId=u9a0a78dc-f841-4&from=paste&height=668&id=u4d206002&name=image.png&originHeight=1336&originWidth=1356&originalType=binary&ratio=1&rotation=0&showTitle=false&size=583943&status=done&style=none&taskId=uadf40f7b-20ff-4b50-b25b-c8854790a68&title=&width=678) -->
+![image.png](../.vuepress/public/images/note/react/5.png)
 ```jsx
 class Comp1 extends React.Component {
     render() {
@@ -1260,7 +1260,7 @@ const app = <App />;
 ReactDOM.render(app, document.getElementById('root'));
 ```
 以上代码生成的虚拟 DOM 树：
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643642929806-b4ab0d71-0ad5-45ae-a29d-3c0e0bf1ccb9.png#averageHue=%23e7e7e6&clientId=u9a0a78dc-f841-4&from=paste&height=660&id=u6e39a418&name=image.png&originHeight=1320&originWidth=910&originalType=binary&ratio=1&rotation=0&showTitle=false&size=453277&status=done&style=none&taskId=ucc096df7-7792-44a4-8937-8540e01be4a&title=&width=455) -->
+![image.png](../.vuepress/public/images/note/react/6.png)
 ### 更新节点
 #### 更新的场景
 
@@ -1397,7 +1397,7 @@ render() {
 - 组件图：某一个组件，在多次提交中，自身渲染花费的时间
 
 点击录制进行录制，然后进行操作，操作完再结束录制，查看效率
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644111858122-7dcf358a-a353-47a4-9b64-619763cac972.png#averageHue=%232a2d33&clientId=ua5842e8e-95ac-4&from=paste&height=670&id=u5b25c748&name=image.png&originHeight=1340&originWidth=912&originalType=binary&ratio=1&rotation=0&showTitle=false&size=217731&status=done&style=none&taskId=u31ddd7e2-feb8-4630-a68e-0f86758c265&title=&width=456) -->
+![image.png](../.vuepress/public/images/note/react/7.png)
 ## HOOK
 HOOK是React16.8.0之后出现
 组件：无状态组件（函数组件）、类组件
@@ -1890,7 +1890,7 @@ export default function App() {
   )
 }
 ```
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644503134735-90899a4b-f73b-4339-ae31-981eb31eb377.png#averageHue=%232b313a&clientId=ub827c758-1b5e-4&from=paste&height=354&id=u7e4cd00a&name=image.png&originHeight=708&originWidth=1432&originalType=binary&ratio=1&rotation=0&showTitle=false&size=136489&status=done&style=none&taskId=ude7dd5da-5ca9-4149-bf08-edc5c281c03&title=&width=716) -->
+![image.png](../.vuepress/public/images/note/react/8.png)
 # React动画
 React第三方动画库：[react-transition-group](https://reactcommunity.org/react-transition-group/)，使用的时候读文档
 ```jsx
@@ -2055,7 +2055,7 @@ export default class App extends Component {
 - 无论是使用Vue，还是React，开发的单页应用程序，可能只是某个站点（域名）的一部分（某一个功能块）
 - 一个单页应用里，可能会划分为多个页面（几乎完全不同的页面效果）（组件）
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644554163990-2b9a568a-c406-4380-8d6a-7a85f4e61002.png#averageHue=%23b6bfd2&clientId=ud996ac90-4d75-4&from=paste&height=409&id=uf0d3151f&name=image.png&originHeight=1040&originWidth=1900&originalType=binary&ratio=1&rotation=0&showTitle=false&size=120671&status=done&style=none&taskId=u35cfb458-0e21-4eec-9c4d-f69c913bb7e&title=&width=748) -->
+![image.png](../.vuepress/public/images/note/react/9.png)
 
 - 如果要在单页应用中完成组件的切换，需要实现下面两个功能：
    - 根据不同的页面地址，展示不同的组件（核心）
@@ -2103,7 +2103,7 @@ export default class App extends Component {
    - History表示浏览器的历史记录，它使用栈的方式存储
    - 指针指向当前访问的路径，通过指针移动访问不同的路径
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643646531658-5eaf2d8a-8dda-495f-a9d4-6d9a178d3ee9.png#averageHue=%23e8ac82&clientId=u9a0a78dc-f841-4&from=paste&height=591&id=u66d1cc3b&name=image.png&originHeight=1182&originWidth=1144&originalType=binary&ratio=1&rotation=0&showTitle=false&size=422963&status=done&style=none&taskId=u0f0a4f80-1eb7-4bf9-ac88-6a34a618f71&title=&width=572) -->
+![image.png](../.vuepress/public/images/note/react/10.png)
 
 - history.length：获取栈中数据量
 - history.pushState：向当前历史记录栈中加入一条新的记录
@@ -2795,7 +2795,7 @@ action reducer store
 ## MVC
 它是一个UI的解决方案，用于降低UI，以及UI关联的数据的复杂度。
 **传统的服务器端的MVC**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643649482134-cf98362d-0e53-481d-8686-54642c691d39.png#averageHue=%23fcfcfb&clientId=u9a0a78dc-f841-4&from=paste&height=463&id=u7abcca61&name=image.png&originHeight=926&originWidth=1956&originalType=binary&ratio=1&rotation=0&showTitle=false&size=457950&status=done&style=none&taskId=u3151c6f7-8409-4149-8053-86fcfd252e2&title=&width=978) -->
+![image.png](../.vuepress/public/images/note/react/11.png)
 环境：
 
 - 服务端需要响应一个完整的HTML
@@ -2805,7 +2805,7 @@ action reducer store
 以上的这种方式叫做**服务端渲染**，即服务器端将完整的页面组装好之后，一起发送给客户端。
 服务器端需要处理UI中要用到的数据，并且要将数据嵌入到页面中，最终生成一个完整的HTML页面响应。
 为了降低处理这个过程的复杂度，出现了MVC模式。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643649515599-53e39db6-639c-46c6-beb6-bba5fdbcad8e.png#averageHue=%23fbfbfa&clientId=u9a0a78dc-f841-4&from=paste&height=603&id=u30e8f3ea&name=image.png&originHeight=1206&originWidth=2072&originalType=binary&ratio=1&rotation=0&showTitle=false&size=803758&status=done&style=none&taskId=u85ac7b1a-0f19-4842-8c2c-27004e4a63d&title=&width=1036) -->
+![image.png](../.vuepress/public/images/note/react/12.png)
 
 - **Controller**: 处理请求，组装这次请求需要的数据
 - **Model**：需要用于UI渲染的数据模型
@@ -2851,7 +2851,7 @@ const deleteAction = {
 ### Redux
 在Flux基础上，引入了reducer的概念
 reducer：处理器，用于根据action来处理数据，处理后的数据会被仓库重新保存
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643649646881-61314f77-c26b-434a-8664-c68c556db29f.png#averageHue=%23fcfcfb&clientId=u9a0a78dc-f841-4&from=paste&height=637&id=u6794a352&name=image.png&originHeight=1274&originWidth=2330&originalType=binary&ratio=1&rotation=0&showTitle=false&size=763450&status=done&style=none&taskId=u89352cb1-6d13-4f5c-b3a1-a25155fa43f&title=&width=1165) -->
+![image.png](../.vuepress/public/images/note/react/13.png)
 ## Action
 
 - action是一个plain-object（平面对象）
@@ -3021,7 +3021,7 @@ ES6新增了一个特殊的函数，叫做生成器函数，只要在函数名�
 - 强大
 - 灵活
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643687481423-abcd4505-d20c-48e9-b7f3-480bc2f09adc.png#averageHue=%23f9faf9&clientId=u4dd0af01-d231-4&from=paste&height=640&id=u42d1e02c&name=image.png&originHeight=1280&originWidth=2734&originalType=binary&ratio=1&rotation=0&showTitle=false&size=979250&status=done&style=none&taskId=u8c1931aa-3499-4486-ba5c-50db84b803e&title=&width=1367) -->
+![image.png](../.vuepress/public/images/note/react/14.png)
 在saga任务中，如果yield了一个普通数据，saga不作任何处理，仅仅将数据传递给yield表达式（把得到的数据放到next的参数中），因此，在saga中，yield一个普通数据没什么意义。
 saga需要你在yield后面放上一些合适的saga指令（saga effects），如果放的是指令，saga中间件会根据不同的指令进行特殊处理，以控制整个任务的流程。
 每个指令本质上就是一个函数，该函数调用后，会返回一个指令对象，saga会接收到该指令对象，进行各种处理。
@@ -3147,7 +3147,7 @@ createProvider(字符串key)：通过一个唯一的key值创建一个Provider�
 # dva
 官方网站：[https://dvajs.com](https://gitee.com/link?target=https%3A%2F%2Fdvajs.com)
 dva不仅仅是一个第三方库，更是一个框架，它主要整合了redux的相关内容，让我们处理数据更加容易，实际上，dva有很多依赖：react、react-router、redux、redux-saga、react-redux、connected-react-router等。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1643688512552-8e4c4b4e-af8e-4105-ac24-3feb42175471.png#averageHue=%23e8ede1&clientId=u4dd0af01-d231-4&from=paste&height=481&id=u63d7e72d&name=image.png&originHeight=962&originWidth=3066&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1207912&status=done&style=none&taskId=u9d85f9ae-1f58-42a6-a733-1fdadbc39b4&title=&width=1533) -->
+![image.png](../.vuepress/public/images/note/react/15.png)
 ## dva的使用
 
 - dva默认导出一个函数，通过调用该函数，可以得到一个dva对象
