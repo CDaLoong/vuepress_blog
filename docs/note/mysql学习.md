@@ -405,7 +405,7 @@
      - 开发者不用关心数据库，仅需关心对象
      - 可轻易的完成数据库的移植
      - 无须拼接复杂的sql语句即可完成精确查询
-       <!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644803377301-39eecfef-1cc1-441e-909c-abd30cf0a231.png#averageHue=%23f7c951&clientId=u529cca61-2834-4&from=paste&height=762&id=u230322c1&name=image.png&originHeight=762&originWidth=1049&originalType=binary&ratio=1&rotation=0&showTitle=false&size=280262&status=done&style=none&taskId=uf5ecc0bc-cb83-492d-9e41-509d6dd2ae5&title=&width=1049) -->
+       ![image.png](../.vuepress/public/images/note/MySQL/1.png)
 -  Node中的ORM
    -  Sequelize
       JS
@@ -696,7 +696,10 @@ Sequelize Docs 中文版：[https://github.com/demopark/sequelize-docs-Zh-CN](ht
 -  对于客户端的影响
    - 客户端要给不同地区的客户友好的显示时间
    - 客户端应该把时间戳或utc时间转换为本地时间显示
-     <!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644804276595-a0689bf4-a00e-420f-87b0-a71a3d1d03ac.png#averageHue=%23fbfbf9&clientId=u529cca61-2834-4&from=paste&height=1054&id=u5bc9f81b&name=image.png&originHeight=1054&originWidth=1214&originalType=binary&ratio=1&rotation=0&showTitle=false&size=406460&status=done&style=none&taskId=u9fcff74e-7b1d-4e0a-be6b-db2fe4e11a3&title=&width=1214)![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644804307361-2241eaca-eeee-47c6-ac71-f5030a7b4682.png#averageHue=%23e2d3d1&clientId=u529cca61-2834-4&from=paste&height=512&id=u5667acda&name=image.png&originHeight=512&originWidth=1542&originalType=binary&ratio=1&rotation=0&showTitle=false&size=133175&status=done&style=none&taskId=u6644b5e8-15a2-463b-aaed-3885cf1d211&title=&width=1542) -->
+
+     ![image.png](../.vuepress/public/images/note/MySQL/2.png)
+     
+     ![image.png](../.vuepress/public/images/note/MySQL/3.png)
 
 ```javascript
   const validate = require("validate.js");
