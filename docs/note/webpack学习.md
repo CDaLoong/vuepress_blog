@@ -44,7 +44,7 @@
 既然开发时态和运行时态面临的局面有巨大的差异，因此，我们需要有一个工具，这个工具能够让开发者专心的在开发时态写代码，然后利用这个工具将开发时态编写的代码转换为运行时态需要的东西。
 
 这样的工具，叫做**构建工具**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567241991-696e487b-d2c6-496a-b330-73e5010adab7.png#averageHue=%23fefcfa&clientId=u60c9a396-5cea-4&from=paste&height=994&id=ueb712d45&name=image.png&originHeight=994&originWidth=2100&originalType=binary&ratio=1&rotation=0&showTitle=false&size=162897&status=done&style=none&taskId=u3b1e2052-448c-425e-9bbe-bad7d4b368d&title=&width=2100) -->
+![image.png](../.vuepress/public/images/note/webpack/1.png)
 这样一来，开发者就可以专注于开发时态的代码结构，而不用担心运行时态遇到的问题了。
 
 ## 常见的构建工具
@@ -105,13 +105,14 @@ webpack
 ### 同模块化标准
 
 如果导出和导入使用的是同一种模块化标准，打包后的效果和之前学习的模块化没有任何差异
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567595099-83f05232-dc30-46be-9024-aa605173cbb2.png#averageHue=%23aeaeae&clientId=u60c9a396-5cea-4&from=paste&height=499&id=ub1cf9e41&name=image.png&originHeight=499&originWidth=1396&originalType=binary&ratio=1&rotation=0&showTitle=false&size=72181&status=done&style=none&taskId=ucc452547-d9ec-4f1a-b57b-7d827e00ec3&title=&width=1396) -->
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567572580-951403a5-5d9e-4fc5-be9f-bff60fe0e2ea.png#averageHue=%23bcbcbc&clientId=u60c9a396-5cea-4&from=paste&height=754&id=u617cbebc&name=image.png&originHeight=754&originWidth=1386&originalType=binary&ratio=1&rotation=0&showTitle=false&size=100670&status=done&style=none&taskId=u904ce234-c77d-44ab-acfc-e92e19c1327&title=&width=1386) -->
+![image.png](../.vuepress/public/images/note/webpack/2.png)
+![image.png](../.vuepress/public/images/note/webpack/3.png)
 
 ### 不同模块化标准
 
 不同的模块化标准，webpack按照如下的方式处理
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567618213-bea536c2-10ea-4cad-8d24-7113da165146.png#averageHue=%23b1b0b0&clientId=u60c9a396-5cea-4&from=paste&height=502&id=u5214205c&name=image.png&originHeight=502&originWidth=1385&originalType=binary&ratio=1&rotation=0&showTitle=false&size=77122&status=done&style=none&taskId=ud83da5df-5abf-495c-9809-00100c76878&title=&width=1385)![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567643622-5cc79e95-4824-4040-8502-b938ed0f434c.png#averageHue=%23b7b7b7&clientId=u60c9a396-5cea-4&from=paste&height=634&id=u459db430&name=image.png&originHeight=634&originWidth=1389&originalType=binary&ratio=1&rotation=0&showTitle=false&size=84279&status=done&style=none&taskId=ua26f787b-370a-40c6-afa7-2ffd63138b3&title=&width=1389) -->
+![image.png](../.vuepress/public/images/note/webpack/4.png)
+![image.png](../.vuepress/public/images/note/webpack/5.png)
 
 ### 最佳实践
 
@@ -198,7 +199,7 @@ module.exports = "abc";
 ### source map 源码地图
 
 前端发展到现阶段，很多时候都不会直接运行源代码，可能需要对源代码进行合并、压缩、转换等操作，真正运行的是转换后的代码
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567742119-179bf142-8e65-4438-9f44-5fb808013223.png#averageHue=%23fefefd&clientId=u60c9a396-5cea-4&from=paste&height=495&id=u73a7224f&name=image.png&originHeight=495&originWidth=824&originalType=binary&ratio=1&rotation=0&showTitle=false&size=153171&status=done&style=none&taskId=u6b7ece18-82c1-40ca-8042-f9edb483688&title=&width=824) -->
+![image.png](../.vuepress/public/images/note/webpack/6.png)
 这就给调试带来了困难，因为当运行发生错误的时候，我们更加希望能看到源代码中的错误，而不是转换后代码的错误
 
 > jquery压缩后的代码：[https://code.jquery.com/jquery-3.4.1.min.js](https://code.jquery.com/jquery-3.4.1.min.js)
@@ -209,8 +210,8 @@ module.exports = "abc";
 source map实际上是一个配置，配置中不仅记录了所有源码内容，还记录了和转换后的代码的对应关系
 
 下面是浏览器处理source map的原理
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567774134-c32f2694-0f91-41f4-84ed-0fb01f21b0ce.png#averageHue=%23cdcccc&clientId=u60c9a396-5cea-4&from=paste&height=818&id=u95301504&name=image.png&originHeight=818&originWidth=1288&originalType=binary&ratio=1&rotation=0&showTitle=false&size=159164&status=done&style=none&taskId=u80380771-be8c-4831-8744-ccf2d0db471&title=&width=1288) -->
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567800533-a0973742-37da-446a-9ec1-cf17495e2c71.png#averageHue=%23c9c8c7&clientId=u60c9a396-5cea-4&from=paste&height=683&id=udeb92b26&name=image.png&originHeight=683&originWidth=1390&originalType=binary&ratio=1&rotation=0&showTitle=false&size=148072&status=done&style=none&taskId=ufb7beadf-6963-4224-bd54-01b074a7bf7&title=&width=1390) -->
+![image.png](../.vuepress/public/images/note/webpack/7.png)
+![image.png](../.vuepress/public/images/note/webpack/8.png)
 **最佳实践**：
 
 - source map 应在开发环境中使用，作为一种调试手段
@@ -225,14 +226,14 @@ source map实际上是一个配置，配置中不仅记录了所有源码内容�
 ## webpack 编译过程
 
 webpack 的作用是将源代码编译（构建、打包）成最终代码
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567867488-65267b7c-4b5b-4594-b85d-cdfc6a9fa526.png#averageHue=%2336444d&clientId=u60c9a396-5cea-4&from=paste&height=531&id=u647ebbd9&name=image.png&originHeight=531&originWidth=1399&originalType=binary&ratio=1&rotation=0&showTitle=false&size=125837&status=done&style=none&taskId=u5e1700bd-8f14-47d8-b37d-ae34567de8d&title=&width=1399) -->
+![image.png](../.vuepress/public/images/note/webpack/9.png)
 整个过程大致分为三个步骤
 
 1. 初始化
 2. 编译
 3. 输出
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567926272-4b64abf6-1f9f-4d7a-850e-9acd423167e5.png#averageHue=%23bac7e5&clientId=u60c9a396-5cea-4&from=paste&height=210&id=u41b5c793&name=image.png&originHeight=210&originWidth=1209&originalType=binary&ratio=1&rotation=0&showTitle=false&size=23865&status=done&style=none&taskId=u360f2eb3-7eda-409a-b9dc-bb2708e0b64&title=&width=1209) -->
+![image.png](../.vuepress/public/images/note/webpack/10.png)
 
 ### 初始化
 
@@ -253,7 +254,7 @@ webpack webpack-cli（webpack命令）
 **chunk是webpack在内部构建过程中的一个概念，译为**`**块**`**，它表示通过某个入口找到的所有依赖的统称。**
 
 根据入口模块（默认为`./src/index.js`）创建一个chunk，chunk可以是有多个的，因为入口模块可以有多个
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567948553-0ac6e02f-9022-48df-a532-f716dc262d5a.png#averageHue=%23fcf6f2&clientId=u60c9a396-5cea-4&from=paste&height=624&id=uf247a15a&name=image.png&originHeight=624&originWidth=830&originalType=binary&ratio=1&rotation=0&showTitle=false&size=32618&status=done&style=none&taskId=u526be8be-9e8e-412c-ada1-62c4fe14d70&title=&width=830) -->
+![image.png](../.vuepress/public/images/note/webpack/11.png)
 每个chunk都有至少两个属性：
 
 - name：默认为main
@@ -261,41 +262,42 @@ webpack webpack-cli（webpack命令）
 
 2. **构建所有依赖模块，递归加载**
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648567972755-92877f28-bb76-4366-9d51-7687b5507333.png#averageHue=%23f8ece4&clientId=u60c9a396-5cea-4&from=paste&height=760&id=u3d06da35&name=image.png&originHeight=760&originWidth=1405&originalType=binary&ratio=1&rotation=0&showTitle=false&size=146076&status=done&style=none&taskId=u2c988c28-243b-4821-8afe-d0418d02f8a&title=&width=1405) -->
+![image.png](../.vuepress/public/images/note/webpack/12.png)
 
 > AST在线测试工具：[https://astexplorer.net/](https://astexplorer.net/)
 
 
 简图
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568006173-95fd6599-53b3-4b06-a99c-f268b475b1f9.png#averageHue=%23fbf1eb&clientId=u60c9a396-5cea-4&from=paste&height=609&id=u73a0f86a&name=image.png&originHeight=609&originWidth=1110&originalType=binary&ratio=1&rotation=0&showTitle=false&size=58983&status=done&style=none&taskId=u1c6e5242-755e-4168-92de-4768b220e3d&title=&width=1110) -->
+![image.png](../.vuepress/public/images/note/webpack/13.png)
 
 3. **产生chunk assets**
 
 在第二步完成后，chunk中会产生一个模块列表，列表中包含了**模块id**和**模块转换后的代码 **
 
 接下来，webpack会根据配置为chunk生成一个资源列表，即`chunk assets`，资源列表可以理解为是生成到最终文件的文件名和文件内容
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568025418-185dadd9-1064-42f3-82b1-ec7fddcfd729.png#averageHue=%23e5e9f2&clientId=u60c9a396-5cea-4&from=paste&height=528&id=ucefa3cd8&name=image.png&originHeight=528&originWidth=1403&originalType=binary&ratio=1&rotation=0&showTitle=false&size=90956&status=done&style=none&taskId=u81071469-ac3f-417a-a5a5-4c3516da047&title=&width=1403) -->
+![image.png](../.vuepress/public/images/note/webpack/14.png)
 
 > **chunk hash是根据所有chunk assets的内容生成的一个hash字符串**
 > **hash：一种算法，具体有很多分类，特点是将一个任意长度的字符串转换为一个固定长度的字符串，而且可以保证原始内容不变，产生的hash字符串就不变**
 
 
 简图
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568044053-1fd5ccaf-bbfa-4c69-8e8c-808ec91a8f84.png#averageHue=%23faefe7&clientId=u60c9a396-5cea-4&from=paste&height=506&id=u1cb2fc70&name=image.png&originHeight=506&originWidth=1402&originalType=binary&ratio=1&rotation=0&showTitle=false&size=74112&status=done&style=none&taskId=u94261e3e-4726-43a6-b392-fc1152a2d8b&title=&width=1402) -->
+![image.png](../.vuepress/public/images/note/webpack/15.png)
 
 4. **合并chunk assets**
 
 将多个chunk的assets合并到一起，并产生一个总的hash
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568063447-c4fd57ee-e393-474a-8195-21b33b3df633.png#averageHue=%23f9f5f0&clientId=u60c9a396-5cea-4&from=paste&height=795&id=ub022ec4d&name=image.png&originHeight=795&originWidth=1199&originalType=binary&ratio=1&rotation=0&showTitle=false&size=104636&status=done&style=none&taskId=ua8a0d306-2f7f-46ec-8054-5993474832a&title=&width=1199) -->
+![image.png](../.vuepress/public/images/note/webpack/16.png)
 
 ### 输出
 
 此步骤非常简单，webpack将利用node中的fs模块（文件处理模块），根据编译产生的总的assets，生成相应的文件。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568083423-991b0b30-ac06-4304-a42b-a2e124c56b77.png#clientId=u60c9a396-5cea-4&from=paste&height=737&id=u7e4dbed1&name=image.png&originHeight=737&originWidth=973&originalType=binary&ratio=1&rotation=0&showTitle=false&size=52519&status=done&style=none&taskId=ubb6e7b2e-89a1-44dd-aedf-6679fa36411&title=&width=973) -->
+![image.png](../.vuepress/public/images/note/webpack/17.png)
 
 ### 总过程
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568097271-ac0c2a55-575d-4d53-977c-29cceb812619.png#clientId=u60c9a396-5cea-4&from=paste&height=676&id=ua15129df&name=image.png&originHeight=676&originWidth=1410&originalType=binary&ratio=1&rotation=0&showTitle=false&size=112738&status=done&style=none&taskId=uce21c12b-9a34-48e7-bf10-1b47e3dacb4&title=&width=1410)![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568112482-14780bf8-75d5-4c47-9c48-bbb7319820f5.png#clientId=u60c9a396-5cea-4&from=paste&height=759&id=ud1c52864&name=image.png&originHeight=759&originWidth=1408&originalType=binary&ratio=1&rotation=0&showTitle=false&size=146997&status=done&style=none&taskId=u21986d1a-8e3e-4ba1-936d-c5f77ef4873&title=&width=1408) -->
+![image.png](../.vuepress/public/images/note/webpack/18.png)
+![image.png](../.vuepress/public/images/note/webpack/19.png)
 **涉及术语**
 
 1. module：模块，分割的代码单元，webpack中的模块可以是任何内容的文件，不仅限于JS
@@ -310,7 +312,7 @@ webpack webpack-cli（webpack命令）
 
 ## 入口和出口
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568129067-32d9944e-ddb1-431b-b1d4-7ec3638e2ddc.png#clientId=u60c9a396-5cea-4&from=paste&height=668&id=u50c080d4&name=image.png&originHeight=668&originWidth=1411&originalType=binary&ratio=1&rotation=0&showTitle=false&size=112490&status=done&style=none&taskId=u909b80be-529a-4b9e-a461-118cf74d631&title=&width=1411) -->
+![image.png](../.vuepress/public/images/note/webpack/20.png)
 
 > node内置模块 - path: [https://nodejs.org/dist/latest-v12.x/docs/api/path.html](https://nodejs.org/dist/latest-v12.x/docs/api/path.html)
 
@@ -351,7 +353,7 @@ __dirname: 所有情况下，都表示当前运行的js文件所在的目录，�
 
 ### 一个页面一个JS
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568149610-90c4b8fc-de8a-4618-936a-730c5949cabb.png#clientId=u60c9a396-5cea-4&from=paste&height=584&id=ua8d2149b&name=image.png&originHeight=584&originWidth=745&originalType=binary&ratio=1&rotation=0&showTitle=false&size=75179&status=done&style=none&taskId=u9f8cb91a-028a-4597-819b-62963c601a6&title=&width=745) -->
+![image.png](../.vuepress/public/images/note/webpack/21.png)
 源码结构
 
 ```
@@ -389,7 +391,7 @@ module.exports = {
 
 ### 一个页面多个JS
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568166685-6e1221db-6a58-4e19-8c5d-8bff204e81c5.png#clientId=u60c9a396-5cea-4&from=paste&height=496&id=u102cd58d&name=image.png&originHeight=496&originWidth=735&originalType=binary&ratio=1&rotation=0&showTitle=false&size=79724&status=done&style=none&taskId=uf1d7f6d2-cf53-46da-8462-06f0db335cf&title=&width=735) -->
+![image.png](../.vuepress/public/images/note/webpack/22.png)
 源码结构
 
 ```
@@ -430,7 +432,7 @@ module.exports = {
 ### 单页应用 - 最佳实践
 
 所谓单页应用，是指整个网站（或网站的某一个功能块）只有一个页面，页面中的内容全部靠JS创建和控制。 vue和react都是实现单页应用的利器。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568178817-8acf29b2-5f64-42e1-81e9-c68e04092289.png#clientId=u60c9a396-5cea-4&from=paste&height=239&id=u18f96912&name=image.png&originHeight=239&originWidth=708&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24765&status=done&style=none&taskId=uc5140d80-0e65-4b48-b687-1ee248464a8&title=&width=708) -->
+![image.png](../.vuepress/public/images/note/webpack/23.png)
 源码结构
 
 ```
@@ -462,17 +464,17 @@ module.exports = {
 
 
 webpack loader： loader本质上是一个函数，它的作用是将某个源码字符串转换成另一个源码字符串返回，loader能做的事情有限，更多的事情需要 plugin 来做。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568198184-23e1836b-6300-4f00-a781-6b1914c1a063.png#clientId=u60c9a396-5cea-4&from=paste&height=290&id=u5c3297b2&name=image.png&originHeight=290&originWidth=876&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22302&status=done&style=none&taskId=u827a5579-679f-464d-9de9-903653758f2&title=&width=876) -->
+![image.png](../.vuepress/public/images/note/webpack/24.png)
 loader函数的将在模块语法解析的过程中被调用，以得到最终的源码。
 
 **全流程：**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568210148-c1bdc1f1-ee58-4abc-94c7-d6fff3141965.png#clientId=u60c9a396-5cea-4&from=paste&height=686&id=uc5385eb5&name=image.png&originHeight=686&originWidth=1409&originalType=binary&ratio=1&rotation=0&showTitle=false&size=113623&status=done&style=none&taskId=u7e144bae-aa84-4cda-9d75-4056c9b1c1c&title=&width=1409) -->
+![image.png](../.vuepress/public/images/note/webpack/25.png)
 **chunk中解析模块的流程：**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568225848-39440b34-18f9-4fd6-8312-00ff2be6a629.png#clientId=u60c9a396-5cea-4&from=paste&height=733&id=u5f3aef4b&name=image.png&originHeight=733&originWidth=1408&originalType=binary&ratio=1&rotation=0&showTitle=false&size=146356&status=done&style=none&taskId=u2f9e58d6-8a26-4191-bdad-2b71880145f&title=&width=1408) -->
+![image.png](../.vuepress/public/images/note/webpack/26.png)
 **chunk中解析模块的更详细流程：**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568242017-23fdb082-e93c-46af-92dd-5e0500a0971d.png#clientId=u60c9a396-5cea-4&from=paste&height=754&id=u19b6601a&name=image.png&originHeight=754&originWidth=1321&originalType=binary&ratio=1&rotation=0&showTitle=false&size=126669&status=done&style=none&taskId=ua04d1c83-caa9-49c2-bc37-a7ee0822b26&title=&width=1321) -->
+![image.png](../.vuepress/public/images/note/webpack/27.png)
 **处理loaders流程：代码在每一个 loader 函数中进行挨个执行**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568260482-82678520-ad62-4e01-9e5c-42702cad2de7.png#clientId=u60c9a396-5cea-4&from=paste&height=779&id=ue02861c6&name=image.png&originHeight=779&originWidth=1320&originalType=binary&ratio=1&rotation=0&showTitle=false&size=85480&status=done&style=none&taskId=u6487e6ab-76ae-4c3e-93a0-e52c5f6c54a&title=&width=1320) -->
+![image.png](../.vuepress/public/images/note/webpack/28.png)
 
 ### loader配置
 
@@ -598,7 +600,7 @@ loader的功能定位是转换代码，而一些其他的操作难以使用loade
 - 当xxxx时，xxxx
 
 **这种类似的功能需要把功能嵌入到webpack的编译流程中，而这种事情的实现是依托于 plugin 的**
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568278915-997e22f7-af0f-4a22-bad1-7d489d3a08ff.png#clientId=u60c9a396-5cea-4&from=paste&height=681&id=uf6bf01e6&name=image.png&originHeight=681&originWidth=1409&originalType=binary&ratio=1&rotation=0&showTitle=false&size=121706&status=done&style=none&taskId=u71ecb210-92c9-4850-9ef2-739c05da5b0&title=&width=1409) -->
+![image.png](../.vuepress/public/images/note/webpack/29.png)
 plugin的**本质**是一个带有apply方法的对象
 
 ```javascript
@@ -635,7 +637,7 @@ module.exports = {
 - **compiler 对象是在初始化阶段构建的，整个 webpack 打包期间只有一个 compiler 对象，后续完成打包工作的是 compiler 对象内部创建的 compilation**
 - **apply方法会在创建好compiler对象后调用，并向方法传入一个compiler对象**
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568295373-1ea0b851-77c4-4625-b0db-4f9605b16b28.png#clientId=u60c9a396-5cea-4&from=paste&height=666&id=u8adcb1f0&name=image.png&originHeight=666&originWidth=1389&originalType=binary&ratio=1&rotation=0&showTitle=false&size=56787&status=done&style=none&taskId=uf7619bc6-643d-40d4-9ec3-fe7af595ca0&title=&width=1389) -->
+![image.png](../.vuepress/public/images/note/webpack/30.png)
 **compiler对象提供了大量的钩子函数（hooks，可以理解为事件），plugin的开发者可以注册这些钩子函数，参与webpack编译和生成。**
 **你可以在apply方法中使用下面的代码注册钩子函数:**
 
@@ -1419,7 +1421,7 @@ BEM是一套针对css类样式的命名方法。
 BEM全称是：**B**lock **E**lement **M**odifier
 
 一个完整的BEM类名：block__element_modifier，例如：`banner__dot_selected`，可以表示：轮播图中，处于选中状态的小圆点
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568346954-8233b1cd-1aae-4c0d-8f1b-927277dcd557.png#clientId=u60c9a396-5cea-4&from=paste&height=424&id=u6398ab87&name=image.png&originHeight=424&originWidth=816&originalType=binary&ratio=1&rotation=0&showTitle=false&size=416674&status=done&style=none&taskId=ub08f934c-d4ff-4b1f-94d9-f0ddf129c66&title=&width=816) -->
+![image.png](../.vuepress/public/images/note/webpack/31.png)
 三个部分的具体含义为：
 
 - **Block**：页面中的大区域，表示最顶级的划分，例如：轮播图(`banner`)、布局(`layout`)、文章(`article`)等等
@@ -1480,7 +1482,7 @@ css module 遵循以下思路解决类名冲突问题：
 4. 同JS的变量一样，每个css模块文件中难以出现冲突的类名，冲突的类名往往发生在不同的css模块文件中
 5. 只需要保证构建工具在合并样式代码后不会出现类名冲突即可
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568364215-2eebf0e1-8761-4d7b-b857-517195ad99a9.png#clientId=u60c9a396-5cea-4&from=paste&height=668&id=uc617ca00&name=image.png&originHeight=668&originWidth=1193&originalType=binary&ratio=1&rotation=0&showTitle=false&size=77980&status=done&style=none&taskId=u4e9643ac-149a-4ba0-a0dd-e662b3a94e7&title=&width=1193) -->
+![image.png](../.vuepress/public/images/note/webpack/32.png)
 
 ### 实现原理
 
@@ -1489,18 +1491,18 @@ css module 遵循以下思路解决类名冲突问题：
 css 文件需要在使用的地方手动引用：import 到 js 或 @import 到 css
 
 css-loader的实现方式如下：
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568378207-e9b82e94-b2fe-4f85-84af-6a8df6be7f36.png#clientId=u60c9a396-5cea-4&from=paste&height=423&id=u0284e5e5&name=image.png&originHeight=423&originWidth=1176&originalType=binary&ratio=1&rotation=0&showTitle=false&size=73712&status=done&style=none&taskId=u7c30ebf4-4c1e-4f6e-8d96-ddd3e9f6d14&title=&width=1176) -->
+![image.png](../.vuepress/public/images/note/webpack/33.png)
 原理极其简单，开启了css module后，css-loader会将样式中的类名进行转换，转换为一个唯一的hash值。
 
 由于hash值是根据模块路径和类名生成的，因此，不同的css模块，哪怕具有相同的类名，转换后的hash值也不一样。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568393951-df6f9f9b-ade6-422b-b43d-93f70442365e.png#clientId=u60c9a396-5cea-4&from=paste&height=794&id=u63a2d997&name=image.png&originHeight=794&originWidth=1179&originalType=binary&ratio=1&rotation=0&showTitle=false&size=146059&status=done&style=none&taskId=u503fddd0-41dd-4eac-99dc-877f6800a98&title=&width=1179) -->
+![image.png](../.vuepress/public/images/note/webpack/34.png)
 
 ### 如何应用样式
 
 css module带来了一个新的问题：源代码的类名和最终生成的类名是不一样的，而开发者只知道自己写的源代码中的类名，并不知道最终的类名是什么，那如何应用类名到元素上呢？
 
 为了解决这个问题，css-loader会导出原类名和最终类名的对应关系，该关系是通过一个对象描述的
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568424192-a9af8da0-bbdc-4b2b-ba9c-fb853fe8bd93.png#clientId=u60c9a396-5cea-4&from=paste&height=697&id=u2aaf6171&name=image.png&originHeight=697&originWidth=1292&originalType=binary&ratio=1&rotation=0&showTitle=false&size=111325&status=done&style=none&taskId=u2479535a-2a1c-40c5-bb78-ba1f1c38b45&title=&width=1292) -->
+![image.png](../.vuepress/public/images/note/webpack/35.png)
 这样一来，我们就可以在js代码中获取到css模块导出的结果，从而应用类名了
 
 style-loader为了我们更加方便的应用类名，会去除掉其他信息，仅暴露对应关系
@@ -1556,9 +1558,9 @@ style-loader为了我们更加方便的应用类名，会去除掉其他信息�
 其中一种方案，便是预编译器
 
 预编译器的原理很简单，即使用一种更加优雅的方式来书写样式代码，通过一个编译器，将其转换为可被浏览器识别的传统css代码
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568441085-e09b3bb4-2b45-476d-b90e-ad62b8b377a3.png#clientId=u60c9a396-5cea-4&from=paste&height=408&id=u8e397dba&name=image.png&originHeight=408&originWidth=1395&originalType=binary&ratio=1&rotation=0&showTitle=false&size=75970&status=done&style=none&taskId=ucaab4ce4-d688-448c-a62a-d770554fdea&title=&width=1395) -->
+![image.png](../.vuepress/public/images/note/webpack/36.png)
 目前，最流行的预编译器有**LESS**和**SASS**，由于它们两者特别相似，因此仅学习一种即可
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568454788-d4326271-d563-4a4e-add5-e15b71dc9a78.png#clientId=u60c9a396-5cea-4&from=paste&height=520&id=u0cb22cd2&name=image.png&originHeight=520&originWidth=1231&originalType=binary&ratio=1&rotation=0&showTitle=false&size=111763&status=done&style=none&taskId=ubea1e0a7-502f-4dcf-8161-ca5232834f6&title=&width=1231) -->
+![image.png](../.vuepress/public/images/note/webpack/37.png)
 
 > less官网：[http://lesscss.org/](http://lesscss.org/)
 > less中文文档1（非官方）：[http://lesscss.cn/](http://lesscss.cn/)
@@ -1642,13 +1644,13 @@ lessc index.less index.css
 PostCss就是基于这样的理念出现的，借鉴了 webpack，本身就是一个打包工具
 
 PostCss类似于一个编译器，可以将样式源码编译成最终的CSS代码
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568481687-73795d38-e533-4f86-a583-6ff56c9c0a4c.png#clientId=u60c9a396-5cea-4&from=paste&height=297&id=u8818a340&name=image.png&originHeight=297&originWidth=1244&originalType=binary&ratio=1&rotation=0&showTitle=false&size=44491&status=done&style=none&taskId=ue44e895c-3694-4121-8cc0-a232a85cf3d&title=&width=1244) -->
+![image.png](../.vuepress/public/images/note/webpack/38.png)
 看上去是不是和LESS、SASS一样呢？
 
 但PostCss和LESS、SASS的思路不同，它其实只做一些代码分析之类的事情，将分析的结果交给插件，具体的代码转换操作是插件去完成的。
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568493924-662c525d-97ff-4367-8297-3893ba9fb715.png#clientId=u60c9a396-5cea-4&from=paste&height=312&id=u1a4003a7&name=image.png&originHeight=312&originWidth=1401&originalType=binary&ratio=1&rotation=0&showTitle=false&size=48694&status=done&style=none&taskId=u8f057487-7ddc-4774-b724-d9d5b5eeb24&title=&width=1401) -->
+![image.png](../.vuepress/public/images/note/webpack/39.png)
 官方的一张图更能说明postcss的处理流程：
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568610025-ff3efe2b-840d-465a-b477-274248ef85fa.png#clientId=u60c9a396-5cea-4&from=paste&height=884&id=u79f7285e&name=image.png&originHeight=884&originWidth=632&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53234&status=done&style=none&taskId=u443b9d47-11a0-4b2f-b066-98db2de387e&title=&width=632) -->
+![image.png](../.vuepress/public/images/note/webpack/40.png)
 
 > 这一点有点像webpack，webpack本身仅做依赖分析、抽象语法树分析，其他的操作是靠插件和加载器完成的。
 
@@ -2052,7 +2054,7 @@ body {
 }
 ```
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568659503-656bd640-5db4-4e6f-ab88-5967550dec71.png#clientId=u60c9a396-5cea-4&from=paste&height=111&id=u971c31e7&name=image.png&originHeight=111&originWidth=1452&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59972&status=done&style=none&taskId=u009d5e83-d5df-47c7-a533-a267d4c3596&title=&width=1452) -->
+![image.png](../.vuepress/public/images/note/webpack/41.png)
 发生了两处错误：
 
 1. 缩进应该只有两个空格
@@ -2130,15 +2132,15 @@ module.exports = {
 ## babel简介
 
 babel一词来自于希伯来语，直译为巴别塔
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568680772-dc89e954-6fbf-426c-882b-7d0b0a4ae472.png#clientId=u60c9a396-5cea-4&from=paste&height=744&id=u514088b4&name=image.png&originHeight=744&originWidth=744&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1200068&status=done&style=none&taskId=u584cf34b-6e37-4566-850b-efc78194a7f&title=&width=744) -->
+![image.png](../.vuepress/public/images/note/webpack/42.png)
 巴别塔象征的统一的国度、统一的语言
 
 而今天的JS世界缺少一座巴别塔，不同版本的浏览器能识别的ES标准并不相同，就导致了开发者面对不同版本的浏览器要使用不同的语言，和古巴比伦一样，前端开发也面临着这样的困境。
 
 babel的出现，就是用于解决这样的问题，它是一个编译器，可以把不同标准书写的语言，编译为统一的、能被各种浏览器识别的语言
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568693727-b7c6199b-d182-4c58-b844-940c9161eca7.png#clientId=u60c9a396-5cea-4&from=paste&height=277&id=u90a44615&name=image.png&originHeight=277&originWidth=1240&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40571&status=done&style=none&taskId=u94c0aad7-9436-4155-ac1e-de106362550&title=&width=1240) -->
+![image.png](../.vuepress/public/images/note/webpack/43.png)
 由于语言的转换工作灵活多样，babel的做法和postcss、webpack差不多，它本身仅提供一些分析功能，真正的转换需要依托于插件完成
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568706779-87d16ddc-ee4a-4bda-907f-858ecf916f74.png#clientId=u60c9a396-5cea-4&from=paste&height=253&id=ue9663bcf&name=image.png&originHeight=253&originWidth=1408&originalType=binary&ratio=1&rotation=0&showTitle=false&size=39835&status=done&style=none&taskId=uf0ec325a-bd68-451d-9fe3-9e53ba3caba&title=&width=1408) -->
+![image.png](../.vuepress/public/images/note/webpack/44.png)
 
 ## babel的安装
 
@@ -2351,7 +2353,7 @@ console.error("bar");
 # 性能优化概述
 
 本章所讲的性能优化主要体现在三个方面：
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568760065-c40649d3-1452-4a6f-aed7-7dea97b2a788.png#clientId=u60c9a396-5cea-4&from=paste&height=351&id=uf15acdb8&name=image.png&originHeight=351&originWidth=481&originalType=binary&ratio=1&rotation=0&showTitle=false&size=20919&status=done&style=none&taskId=u6ddc120c-bba9-42b2-89d5-20c46095ae8&title=&width=481) -->
+![image.png](../.vuepress/public/images/note/webpack/45.png)
 **构建性能**
 
 这里所说的构建性能，是指在**开发阶段的构建性能**，而不是生产环境的构建性能
@@ -2390,12 +2392,12 @@ console.error("bar");
 
 #### 什么叫做模块解析？
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568781527-27ba6775-9889-4815-bae4-cc9ebc98cf72.png#clientId=u60c9a396-5cea-4&from=paste&height=786&id=u8f5469c0&name=image.png&originHeight=786&originWidth=1348&originalType=binary&ratio=1&rotation=0&showTitle=false&size=138378&status=done&style=none&taskId=ue1bdb117-2870-4adc-8d7f-943383300c5&title=&width=1348) -->
+![image.png](../.vuepress/public/images/note/webpack/46.png)
 模块解析包括：抽象语法树分析、依赖分析、模块语法替换
 
 #### 不做模块解析会怎样？
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568797504-9c9b4264-5341-4cca-af5a-5d71da7f6763.png#clientId=u60c9a396-5cea-4&from=paste&height=771&id=udf98556d&name=image.png&originHeight=771&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&size=107028&status=done&style=none&taskId=ua0c82600-d65e-4d07-88f8-a2d1956d0ef&title=&width=1332) -->
+![image.png](../.vuepress/public/images/note/webpack/47.png)
 如果某个模块不做解析，该模块经过loader处理后的代码就是最终代码。
 
 如果没有loader对该模块进行处理，该模块的源码就是最终打包结果的代码。
@@ -2484,7 +2486,7 @@ module.exports = {
 有趣的是，`cache-loader`放到最前面，却能够决定后续的loader是否运行
 
 实际上，loader的运行过程中，还包含一个过程，即`pitch`
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568827244-c455218b-58ca-4d6a-99c6-ea12ce110218.png#clientId=u60c9a396-5cea-4&from=paste&height=453&id=uc397dc5c&name=image.png&originHeight=453&originWidth=1078&originalType=binary&ratio=1&rotation=0&showTitle=false&size=93086&status=done&style=none&taskId=u78920303-1a0e-4e58-9706-eea2355395b&title=&width=1078) -->
+![image.png](../.vuepress/public/images/note/webpack/48.png)
 `cache-loader`还可以实现各自自定义的配置，具体方式见文档
 
 #### 为loader的运行开启多线程
@@ -2510,9 +2512,9 @@ module.exports = {
 
 
 当使用`webpack-dev-server`时，考虑代码改动到效果呈现的过程
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568848882-9996fc6c-6d5d-446a-be24-b7365869f085.png#clientId=u60c9a396-5cea-4&from=paste&height=211&id=ubbe329c4&name=image.png&originHeight=211&originWidth=927&originalType=binary&ratio=1&rotation=0&showTitle=false&size=37028&status=done&style=none&taskId=u83b3d2ac-1f6d-45a9-b968-47f7049ad73&title=&width=927) -->
+![image.png](../.vuepress/public/images/note/webpack/49.png)
 而使用了热替换后，流程发生了变化
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568861265-23aa3bec-b241-4df8-941a-891fcbf9f1b5.png#clientId=u60c9a396-5cea-4&from=paste&height=268&id=u651f030a&name=image.png&originHeight=268&originWidth=1261&originalType=binary&ratio=1&rotation=0&showTitle=false&size=47042&status=done&style=none&taskId=u49cc2169-8504-481f-9b57-2f4a7f7d022&title=&width=1261) -->
+![image.png](../.vuepress/public/images/note/webpack/50.png)
 
 #### 使用和原理
 
@@ -2551,7 +2553,7 @@ if(module.hot){ // 是否开启了热更新
 但如果运行了`module.hot.accept()`，将改变这一行为
 
 `module.hot.accept()`的作用是让`webpack-dev-server`通过`socket`管道，把服务器更新的内容发送到浏览器
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568875869-b92ce693-5882-4ec0-ad53-264a7083b285.png#clientId=u60c9a396-5cea-4&from=paste&height=186&id=u8179ee74&name=image.png&originHeight=186&originWidth=792&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16328&status=done&style=none&taskId=u63973a5d-ef9c-4f7a-a970-e7379868afd&title=&width=792) -->
+![image.png](../.vuepress/public/images/note/webpack/51.png)
 然后，将结果交给插件`HotModuleReplacementPlugin`注入的代码执行，插件`HotModuleReplacementPlugin`会根据覆盖原始代码，然后让代码重新执行，浏览器不刷新，只是代码变量指向的对象替换
 
 **所以，热替换发生在代码运行期**
@@ -2576,7 +2578,7 @@ if(module.hot){ // 是否开启了热更新
 
 1. 先单独的打包公共模块
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568891349-b3fff815-ff1f-4b59-b2b9-61d21af9d2be.png#clientId=u60c9a396-5cea-4&from=paste&height=519&id=u5355b872&name=image.png&originHeight=519&originWidth=1070&originalType=binary&ratio=1&rotation=0&showTitle=false&size=83635&status=done&style=none&taskId=u4be1bf32-8f61-40fe-a0f7-ab97f27e014&title=&width=1070) -->
+![image.png](../.vuepress/public/images/note/webpack/52.png)
 公共模块会被打包成为动态链接库(dll Dynamic Link Library)，并生成资源清单
 
 2. 根据入口模块进行正常打包
@@ -2732,7 +2734,7 @@ module.exports = {
 > 实际上，webpack在内部是使用`SplitChunksPlugin`进行分包的
 > 过去有一个库`CommonsChunkPlugin`也可以实现分包，不过由于该库某些地方并不完善，到了`webpack4`之后，已被`SplitChunksPlugin`取代
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568916967-b7a7383f-6283-4eca-ae8f-f9f68659b50c.png#clientId=u60c9a396-5cea-4&from=paste&height=440&id=u66e02229&name=image.png&originHeight=440&originWidth=1189&originalType=binary&ratio=1&rotation=0&showTitle=false&size=78674&status=done&style=none&taskId=u95c92b95-90e5-4e53-8c2c-1c0f1b12694&title=&width=1189) -->
+![image.png](../.vuepress/public/images/note/webpack/53.png)
 从分包流程中至少可以看出以下几点：
 
 - 分包策略至关重要，它决定了如何分包
@@ -2982,9 +2984,6 @@ module.exports = {
 
 > 压缩可以移除模块内部的无效代码
 > tree shaking 可以移除模块之间的无效代码
-
-
-![](https://user-gold-cdn.xitu.io/2018/1/4/160bfdcf2a31ce4a?imageslim#id=YNY9C&originHeight=341&originWidth=606&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 #### 背景
 
@@ -3250,7 +3249,7 @@ gzip是一种压缩文件的算法
 
 #### B/S结构中的压缩传输
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568974512-3245c644-6555-4c91-ac57-527b22bf2467.png#clientId=u60c9a396-5cea-4&from=paste&height=267&id=u55c8f0e6&name=image.png&originHeight=267&originWidth=1207&originalType=binary&ratio=1&rotation=0&showTitle=false&size=52134&status=done&style=none&taskId=ue06d8209-e0b7-41c6-a5a0-b85ac7c8373&title=&width=1207) -->
+![image.png](../.vuepress/public/images/note/webpack/54.png)
 优点：传输效率可能得到大幅提升
 
 缺点：服务器的压缩需要时间，客户端的解压需要时间
@@ -3258,7 +3257,7 @@ gzip是一种压缩文件的算法
 #### 使用webpack进行预压缩
 
 使用`compression-webpack-plugin`插件对打包结果进行预压缩，可以移除服务器的压缩时间
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1648568985618-7f87f210-3878-4d43-8e45-f705c912fa23.png#clientId=u60c9a396-5cea-4&from=paste&height=285&id=u7d508a03&name=image.png&originHeight=285&originWidth=1248&originalType=binary&ratio=1&rotation=0&showTitle=false&size=54309&status=done&style=none&taskId=u1b74b123-82e2-42e7-bb4b-4a1331d312b&title=&width=1248) -->
+![image.png](../.vuepress/public/images/note/webpack/55.png)
 
 ```javascript
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -3285,7 +3284,7 @@ module.exports = {
 ### bundle analyzer  --- bundle 分析
 
 一个插件，会帮你生成一个页面，用来分析出口生成的 bundle.js 的模块依赖关系和各个模块的大小
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1649580560154-80c2fcac-836c-4b5c-b399-c4ebf7f1e1d9.png#clientId=ufd1abbc7-1544-4&from=paste&height=1223&id=u4584380d&name=image.png&originHeight=1223&originWidth=2541&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1050818&status=done&style=none&taskId=u8dac5e8d-0811-4a33-9f47-c438440524a&title=&width=2541) -->
+![image.png](../.vuepress/public/images/note/webpack/56.png)
 
 ```javascript
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
