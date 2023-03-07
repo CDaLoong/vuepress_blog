@@ -137,6 +137,12 @@ export default defineUserConfig({
             // link: "/note/webpack学习.md",
             children: ["/note/webpack学习.md"],
           },
+          {
+            text: "react学习",
+            collapsible: true,
+            // link: "/note/vue2学习.md",
+            children: ["/note/react学习"],
+          },
         ],
       },
     ],
