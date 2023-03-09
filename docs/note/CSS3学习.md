@@ -1,49 +1,39 @@
-# css3
+# [CSS3](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
-css2-->css3
+CSS 是开放 Web 的核心语言之一，并根据 W3C 规范在 Web 浏览器中进行了标准化。以前，CSS 规范的各个部分的开发是同步进行的，这种方式允许对最新推荐的 CSS 版本进行控制。你可能已经听说过 CSS1、CSS2.1 甚至 CSS3。但是以后将不会再有 CSS3 或者 CSS4；相反，现在的一切都是没有版本号的 CSS。
 
-## css3发展历程
+## 加前缀只支持对应内核浏览器
 
-### 加前缀只支持对应内核浏览器
+加前缀是因为该属性最早(甚至现在任然)只由该家浏览器支持，为了兼容老版本浏览器
+    
+   - goole/safari  -webkit-
+    
+   - ie -ms-
 
-```
-    - 加前缀是因为该属性最早只由该家浏览器支持
-    goole/safari  -webkit-
-    ie -ms-
-```
-
-- firefox -o-
-- opera -moz-
-
-```
-### 直到现在仍有些属性在发展中
-    - 如有些属性只由-webkit-内核或其他内核支持
-```
+   - firefox -o-
+   
+   - opera -moz-
 
 ### css手册
+1. reference(参考) manual(手册) website(网站): http://css.doyoe.com
 
-```
-  1. reference(参考) manual(手册) website(网站): http://css.doyoe.com
-  2. Authoritative(权威的) inquiry(查找) website: http://www.caniuse.com
-```
+2. Authoritative(权威的) inquiry(查找) website: http://www.caniuse.com
 
-### 插件
+## 插件
 
-```
-  - 预处理器 pro-processor:
+- 预处理器 pro-processor:
     less/sass(插件)  cssNext(插件)
     简化代码，先按照别人的格式写，再生成css代码，预处理，相当于设定预设对象，从对象里取要用的东西，对象里的东西改则代码跟着改
     cssNext 用来实现一些未来的标准的（未完全在各大浏览器兼容）
 
-  - 后处理器 post-processor：
+- 后处理器 post-processor：
     autoprefixer (插件)
     补齐缺少的带有前缀的属性，还是自己的代码格式，写完后帮咱们补充，后处理
 
-  - postCss(工具) + 插件 （充分体现扩展性，200多个）
+- postCss(工具) + 插件 （充分体现扩展性，200多个）
     postCss是用js实现的css的抽象的语法树，很多插件基于语法树来进行接下来的编写
     AST(Abstract Syntax Tree)
     剩下的事留给后人来做
-```
 
 ## css3选择器
 
@@ -107,7 +97,7 @@ css2-->css3
 -  border-image-source: (资源)url();**支持渐变色**linear-gradient(red,skyblue); 
 -  border-image-slice:(截取，可以填1 - 4个值，只能填数字或百分比，分别代表top right bottom left，将图片分割成9份取用周围的8份)默认值为100%，但是只显示四个角， 最后可以加fill，把内容区也填充 
 -  border-image-width: (设置border里背景图片所占的宽度，一般小于边框的宽度，一般不动它，默认值为1，填auto会与slice看齐，) 
--  borderimage-outset:(使边框图片往外延伸) 
+-  border-image-outset:(使边框图片往外延伸) 
 -  border-image-repeat:stretch(默认值,拉伸) | repeat(平铺，相当于复制填充，能填充多少填多少，不够一个铺半个) | round(完整平铺，先拉伸平铺，等到达一定程度压缩  平铺，不会平铺出来半个) | space(完整平铺，先拿空白铺，等一定程度加一个新的图形)  可以填两个参数 
 
 ### color
@@ -234,15 +224,15 @@ background-color: blue;
 }; 
 ```
 
-   -  @keyframes: 关键帧容器，加一个关键帧名字,里边填关键帧元素状态 
-   -  animation-name: name;填关键帧名字 
-   -  animation-duration: 3s;过渡时长 
-   -  animation-timing-function: 默认ease平滑过渡; 过渡方式 linear线性过渡; ease-in由慢到快; ease-out由快到慢; ease-in-out由慢到快再到慢; 
-   -  animation-delay:0;过多长时间执行动画，默认为0 
-   -  animation-iteration-count: 默认值1;规定动画运行次数，infinity无限运动 
-   -  animation-direction: 默认值为normal;reverse跟据关键帧倒着运动;alternate先正着执行一次再倒着执行一次，iteration必须大于等于2;alternate-reverse第一次开始 先倒着执行，再正着执行 
-   -  animation-play-state:running运动;paused停止;可配合伪元素使用，不常用 
-   -  animation-fill-mode: 默认为none不设置动画对象之外的状态; forwards设置对象运动之后的状态为动画结束时的状态，也就是最后一帧的状态; backwards设置对象运动开  始之前的状态为动画开始时的状态，也就是第一帧的状态; both设置对象开始之前和运动之后的状态为动画结束或开始的状态; 
+-  @keyframes: 关键帧容器，加一个关键帧名字,里边填关键帧元素状态 
+-  animation-name: name;填关键帧名字 
+-  animation-duration: 3s;过渡时长 
+-  animation-timing-function: 默认ease平滑过渡; 过渡方式 linear线性过渡; ease-in由慢到快; ease-out由快到慢; ease-in-out由慢到快再到慢; 
+-  animation-delay:0;过多长时间执行动画，默认为0 
+-  animation-iteration-count: 默认值1;规定动画运行次数，infinity无限运动 
+-  animation-direction: 默认值为normal;reverse跟据关键帧倒着运动;alternate先正着执行一次再倒着执行一次，iteration必须大于等于2;alternate-reverse第一次开始 先倒着执行，再正着执行 
+-  animation-play-state:running运动;paused停止;可配合伪元素使用，不常用 
+-  animation-fill-mode: 默认为none不设置动画对象之外的状态; forwards设置对象运动之后的状态为动画结束时的状态，也就是最后一帧的状态; backwards设置对象运动开  始之前的状态为动画开始时的状态，也就是第一帧的状态; both设置对象开始之前和运动之后的状态为动画结束或开始的状态; 
 -  animation: name 3s cubic-bezier(0.2,-1.3,0.5,1.63) 1s both; 
 
 ####  css动画和js动画的区别
@@ -317,7 +307,7 @@ background-color: blue;
                                                          reflow比repaint耗性能
 ```
 
-- 引起reflow：
+- 引起reflow(重排)：
   - 改变窗口大小
   - 改变文字大小
   - 内容的改变，输入框输入文字
@@ -326,7 +316,7 @@ background-color: blue;
   - 脚本操作DOM
   - 计算offsetWidth和offsetHeight
   - 设置style属性
-- 引起repaint：
+- 引起repaint(重绘)：
   - 只是修改某某一元素的字体颜色大小等内容
   - 一般浏览器刷新页面的频率为 1s 60次  也就是60fps
   - 大概16.7ms一次
@@ -355,7 +345,7 @@ transform: ;
 -  crt显示屏，求点距的方法的意义的 
 -  LCD液晶屏 LED液晶屏 
 
-#### 像素px
+### 像素px
 
 - 点距可以代表像素大小，但不是实际像素大小，等边三角形等边点距，等腰三角形水平点距，三个点空间混合法
   - 栅格型点距，三条空间混合法
@@ -407,14 +397,14 @@ transform: ;
           - screen(屏幕)
           - print(页面打印或打印预览模式）
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644809556893-dbd1d56e-5b49-4e1b-8265-639be6b946bb.png#averageHue=%23efeeec&clientId=u2df59e4a-b1d1-4&from=paste&height=513&id=u6ac88220&name=image.png&originHeight=513&originWidth=838&originalType=binary&ratio=1&rotation=0&showTitle=false&size=38680&status=done&style=none&taskId=u0731edf5-6266-4abb-a521-c21b38e414c&title=&width=838) -->
+![image.png](../.vuepress/public/images/note/html+css/CSS3/1.png)
 
          - 媒体特性（Media features): 
             - width(渲染区宽度)
             - device-width(设备宽度)...
             - Media Query是CSS3 对Media Type的增强版，其实可以将Media Query看成Media Type(判断条件)+CSS(符合条件的样式规则) 
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644817447540-4ac8b72d-221d-41be-8984-989cfe65bc83.png#averageHue=%23f2f1ee&clientId=u2df59e4a-b1d1-4&from=paste&height=626&id=u75e37284&name=image.png&originHeight=626&originWidth=624&originalType=binary&ratio=1&rotation=0&showTitle=false&size=154807&status=done&style=none&taskId=u188a9874-5126-47cb-aa0d-fd6749043bb&title=&width=624) -->
+![image.png](../.vuepress/public/images/note/html+css/CSS3/2.png)
 
    -  逻辑运算：
       - 合并多个媒体属性 and
@@ -437,7 +427,7 @@ transform: ;
         Query --> css3 
    -  主要断点： 设备宽度的临界点 
 
-<!-- ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2675710/1644818167755-4c54521d-17b5-4c21-9260-1bc276fe441a.png#averageHue=%23efefef&clientId=u2df59e4a-b1d1-4&from=paste&height=1136&id=u9046ef08&name=image.png&originHeight=1136&originWidth=1902&originalType=binary&ratio=1&rotation=0&showTitle=false&size=504444&status=done&style=none&taskId=u2075968a-8916-4a8d-bbf4-dcdb2a8c4ca&title=&width=1902) -->
+![image.png](../.vuepress/public/images/note/html+css/CSS3/3.png)
 
       - 大小的区别 ---> 宽度不同   ---> 根据不同宽度展示不同的样式
       - 响应式网页开发主要是在css样式上面进行操作

@@ -1,4 +1,5 @@
-# 属性篇
+# [HTML5](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+## 属性篇
 
 -  placeholder	输入框的提示信息
 -  input的type，应用于form表单下的 
@@ -25,7 +26,7 @@
    - 事件是由行为触发的，但是一个行为可以不止触发一个事件
    - **所有的标签元素，当拖拽周期结束时，默认事件是回到原处**
 
-```javascript
+```js
 var dom = document.querySelector(".div")
 dom.ondragstart = function(e){ 
   e.dataTransfer.effectAllowed = 'link' | 'copy' | 'move';//改变鼠标拖拽时的指针，只在ondragstart下设置才能生效          
@@ -74,7 +75,7 @@ target.ondrop = function(e){
   - **此时编辑器就可以进行自动提示了**
 - 画线
 
-```javascript
+```html
 <script>
     var can = document.getElementById("can");
     var ctx = can.getContext("2d"); // 设置为2d画布, .getContext() 方法返回canvas 的上下文，如果上下文没有定义则返回 null
@@ -98,7 +99,7 @@ target.ondrop = function(e){
 
 - 画矩形
 
-```javascript
+```html
  <script>//画矩形
      var can = document.getElementById("can");
      var ctx = can.getContext("2d"); // 设置为2d画布
@@ -112,7 +113,7 @@ target.ondrop = function(e){
 
 - 画圆
 
-```javascript
+```html
 <script>//画圆
     var can = document.getElementById("can");
     var ctx = can.getContext("2d"); // 设置为2d画布
@@ -142,7 +143,7 @@ target.ondrop = function(e){
 
 - 画二次样条曲线
 
-```javascript
+```html
 <script>//画二次样条曲线
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");
@@ -171,7 +172,7 @@ target.ondrop = function(e){
 
 - 绘制贝塞尔曲线
 
-```javascript
+```html
 <script>//绘制贝塞尔曲线
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");  
@@ -202,7 +203,7 @@ target.ondrop = function(e){
 
 - 旋转缩放，保存还原
 
-```javascript
+```html
  <script>//旋转缩放，保存还原
      var can = document.getElementById("can");
      var ctx = can.getContext("2d");
@@ -223,7 +224,7 @@ target.ondrop = function(e){
 
 - 背景填充
 
-```javascript
+```html
  <script>//图片填充
      var can = document.getElementById("can");
      var ctx = can.getContext("2d");
@@ -265,7 +266,7 @@ target.ondrop = function(e){
 
 - 添加阴影
 
-```javascript
+```html
 <script>//添加阴影
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");
@@ -280,7 +281,7 @@ target.ondrop = function(e){
 
 - 设置字体
 
-```javascript
+```html
 <script>//设置字体
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");
@@ -294,7 +295,7 @@ target.ondrop = function(e){
 
 - 两端线头和相交线端样式
 
-```javascript
+```html
 <script>//两端线头和相交线端样式
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");
@@ -461,15 +462,15 @@ target.ondrop = function(e){
 
 ## video和audio
 
-# 一些API
+## 一些API
 
-## 获取地理位置
+### 获取地理位置
 
 - 获取地理信息，但是一些系统不支持这个功能，台式机几乎没有GPS，笔记本绝大多数也没有，智能手机几乎都有；网络也可以用来粗略估计地理位置
 - 在https、file协议下可以获取，在http协议下不能获取
 - 经纬度：经度最大180，维度最大90
 
-```javascript
+```js
 window.navigator.geolocation.getCurrentPosition(function (position) {
     console.log('成功获取', position);
 }, function () {
@@ -477,24 +478,24 @@ window.navigator.geolocation.getCurrentPosition(function (position) {
 })
 ```
 
-## 陀螺仪，体感
+### 陀螺仪，体感
 
 - 苹果设备的页面只有在https协议的情况下才能使用这些接口， 苹果11.x及之前的版本可以使用
 - alpha：指北（指南针），[0 - 360]，0的时候指北，180的时候指南
 - beta：平放时beta值为0，手机短边接触桌面立起来，下边直立时为90，倒着上边立起来为-90
 - gamma：平放的时候gamma值为0，手机右长边接触桌面立起来，直立时为90，左长边立起来为-90
 
-```javascript
+```js
 window.addEventListener('deviceorientation', function (event) {
     document.getElementById('main').innerHTML = 'alpha:' + event.alpha + '<br/>' + 'beta' + event.beta + '<br/>' + 'gamma' + event.gamma;
 })
 ```
 
-## 加速度
+### 加速度
 
 - 加速度，acceleration，三个方向
 
-```javascript
+```js
 window.addEventListener('devicemotion', function(event){
     document.getElementById('main').innerHTML = event.acceleration.x + '<br/>' + event.acceleration.y + '<br/>' + event.acceleration.z;
     if(Math.abs(event.acceleration.x) > 9 || Math.abs(event.acceleration.y) > 9 || Math.abs(event.acceleration.z) > 9){
@@ -503,22 +504,22 @@ window.addEventListener('devicemotion', function(event){
 })
 ```
 
-## 动画优化
+### 动画优化
 
-```javascript
+```js
 let timer = null;
 timer = requestAnimationFrame();//每秒60帧，可传移动函数，看起来更加流畅，可以准时执行每一帧，setInterval(1000/16)的话每帧的时间少于1/60秒，兼容性极差
 cancelAnimationFrame(timer);//清除requestAnimationFrame
 ```
 
-## 数据存储
+### 数据存储
 
 - coolie: 每次请求的时候都有可能传送许多无用的信息到后端，发送请求时会把所有数据带出去，存储内容较少，一般少于4k
 - localStorage：只能存储字符串，长期存储的数据，无论页面是否关闭都要存储；在发送请求的时候不会把数据发出去，可以存放较多内容，5M左右
 - sessionStorage：临时会话需要存储的信息，每次窗口关闭都会自动清空
 - 相同协议、相同域名、相同端口才成为一个域
 
-```javascript
+```js
 localStorage.name = 'DaLong';
 localStorage.arr = JSON.stringify([1,2,3]);
 console.log(JSON.parse(localStorage.arr));
@@ -531,7 +532,7 @@ console.log(JSON.parse(localStorage.obj));
 sessionStorage.name = 'DaLong';
 ```
 
-## history
+### history
 
 ```html
 <input type="text" id="search"><button onclick="search()">搜索</button>
@@ -585,9 +586,10 @@ sessionStorage.name = 'DaLong';
 </script>
 ```
 
-## worker
+### worker
 
-- js都是单线程的，但worker的多线程的，而且是真的多线程，不是伪多线程，worker不能操作dom，没有window对象，不能读取本地文件，但可以发ajax和计算，理论上在worker可以继续创建worker，但实际上没有任何一款浏览器支持
+- js都是单线程的，但worker的多线程的，而且是真的多线程，不是伪多线程，worker不能操作dom，没有window对象，不能读取本地文件，但可以发ajax和计算
+- 理论上在worker可以继续创建worker，但实际上没有任何一款浏览器支持
 
 ```js
  let beginTime = Date.now();

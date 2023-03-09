@@ -54,22 +54,10 @@ export default defineUserConfig({
         // link: "/blog/",
         children: [
           {
-            text: "HTNL+CSS基础学习",
+            text: "HTNL+CSS学习",
             collapsible: true,
             // link: "/note/HTNL+CSS基础学习.md",
-            children: ["/note/HTNL+CSS基础学习.md"],
-          },
-          {
-            text: "HTML5学习",
-            collapsible: true,
-            // link: "/note/HTML5学习.md",
-            children: ["/note/HTML5学习.md"],
-          },
-          {
-            text: "CSS3学习",
-            collapsible: true,
-            // link: "/note/CSS3学习.md",
-            children: ["/note/CSS3学习.md"],
+            children: ["/note/HTNL+CSS基础学习.md", "/note/HTML5学习.md", "/note/CSS3学习.md"],
           },
           {
             text: "JS基础学习",
