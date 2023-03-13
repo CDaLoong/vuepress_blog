@@ -1,4 +1,4 @@
-# 概述
+# ES6+
 
 ## ECMAScript、JavaScript、NodeJs 的区别
 

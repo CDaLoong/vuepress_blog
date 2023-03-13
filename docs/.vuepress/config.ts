@@ -60,16 +60,10 @@ export default defineUserConfig({
             children: ["/note/HTNL+CSS基础学习.md", "/note/HTML5学习.md", "/note/CSS3学习.md"],
           },
           {
-            text: "JS基础学习",
+            text: "JS学习",
             collapsible: true,
             // link: "/note/JS正则加bom和dom学习.md",
-            children: ["/note/JS正则加bom和dom学习.md"],
-          },
-          {
-            text: "ES6学习",
-            collapsible: true,
-            // link: "/note/ES6学习.md",
-            children: ["/note/ES6学习.md"],
+            children: ["/note/JS基础学习.md", "/note/ES6学习.md"],
           },
           {
             text: "git学习",
