@@ -125,6 +125,18 @@ export default defineUserConfig({
             // link: "/note/mysql学习.md",
             children: ["/note/mysql学习.md"],
           },
+          {
+            text: "Linux学习",
+            collapsible: true,
+            // link: "/note/NodeJS学习.md",
+            children: ["/note/Linux学习.md"],
+          },
+          {
+            text: "Rust学习",
+            collapsible: true,
+            // link: "/note/NodeJS学习.md",
+            children: ["/note/Rust学习.md"],
+          },
         ],
       },
     ],
