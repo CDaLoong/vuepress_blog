@@ -120,7 +120,7 @@ export default defineUserConfig({
             children: ["/note/NodeJS学习.md"],
           },
           {
-            text: "mysql学习",
+            text: "数据库学习",
             collapsible: true,
             // link: "/note/mysql学习.md",
             children: ["/note/mysql学习.md"],
