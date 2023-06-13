@@ -38,7 +38,7 @@
 - DBMS：database management system    数据库管理系统
 - DBS：database system    数据库系统，DBS包含DB、DBA、DBMS
 
-# MySQL
+## MySQL
 
 关系型数据库，原瑞典MySQL AB公司开发，已被Oracle收购，具有开源、轻量、快速的特点
 
@@ -345,9 +345,9 @@
 
 操作视图属于DDL，主要用于方便查询，不要用来修改数据
 
-# 数据驱动和ORM
+## 数据驱动和ORM
 
-## mysql驱动程序
+### mysql驱动程序
 
 -  什么是驱动程序 
 -  驱动程序是连接内存和其他存储介质的桥梁 
@@ -397,7 +397,7 @@
    test('张');
 ```
 
-## Sequelize
+### Sequelize
 
 -  ORM 
    - Object Relational Mapping 对象关系映射
@@ -417,7 +417,7 @@
       TS
       不成熟 
 
-### 模型定义和同步
+#### 模型定义和同步
 
 Sequelize Docs 中文版：[https://github.com/demopark/sequelize-docs-Zh-CN](https://github.com/demopark/sequelize-docs-Zh-CN)
 

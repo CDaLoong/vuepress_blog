@@ -139,6 +139,17 @@ export default defineUserConfig({
           },
         ],
       },
+      {
+        text: "代码风格",
+        collapsible: true,
+        children: [
+          {
+            text: "代码开发规范",
+            collapsible: true,
+            children: ["/note/js代码开发规范.md"],
+          },
+        ]
+      },
     ],
   }),
   // 插件
