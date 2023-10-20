@@ -150,6 +150,17 @@ export default defineUserConfig({
           },
         ]
       },
+      {
+        text: "工作学习",
+        collapsible: true,
+        children: [
+          {
+            text: "代码自动化流水线部署",
+            collapsible: true,
+            children: ["/blog/基于GitLab Runner的CICD部署流程.md"],
+          },
+        ]
+      },
     ],
   }),
   // 插件

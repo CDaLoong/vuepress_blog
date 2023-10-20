@@ -9,6 +9,20 @@
 ## 概述
 
 ## 一些操作记录
+
+### 常用操作
+```shell
+# 查看ip
+hostname -1
+ifconfig
+ip addr
+ip address
+ip addr show
+ip address show
+
+
+```
+
 ### 更新系统
 ```shell
 sudo dnf clean all
