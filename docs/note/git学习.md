@@ -1,3 +1,4 @@
+# git操作
 1. win + r 输入cmd调出命令行
 2. 输入ping 加一个网址如www.taobao.com 进行测网速
 3. git branch a                    创建新分支a

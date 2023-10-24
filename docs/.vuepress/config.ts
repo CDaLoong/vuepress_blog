@@ -66,77 +66,29 @@ export default defineUserConfig({
             children: ["/note/JS基础学习.md", "/note/ES6学习.md"],
           },
           {
-            text: "git学习",
+            text: "工程化学习",
             collapsible: true,
             // link: "/note/git学习.md",
-            children: ["/note/git学习.md"],
+            children: ["/note/git学习.md", "/note/模块化学习.md", "/note/包管理器学习.md", "/note/webpack学习.md"],
           },
           {
-            text: "模块化学习",
-            collapsible: true,
-            // link: "/note/模块化学习.md",
-            children: ["/note/模块化学习.md"],
-          },
-          {
-            text: "包管理器学习",
-            collapsible: true,
-            // link: "/note/包管理器学习.md",
-            children: ["/note/包管理器学习.md"],
-          },
-          {
-            text: "webpack学习",
-            collapsible: true,
-            // link: "/note/webpack学习.md",
-            children: ["/note/webpack学习.md"],
-          },
-          {
-            text: "vue2学习",
+            text: "前端框架学习",
             collapsible: true,
             // link: "/note/vue2学习.md",
-            children: ["/note/vue2学习.md"],
+            children: ["/note/vue2学习.md", "/note/react学习"],
           },
           {
-            text: "react学习",
-            collapsible: true,
-            // link: "/note/vue2学习.md",
-            children: ["/note/react学习"],
-          },
-          {
-            text: "网络学习",
+            text: "计算机基础知识学习",
             collapsible: true,
             // link: "/note/网络学习.md",
-            children: ["/note/网络学习.md"],
+            children: ["/note/网络学习.md", "/note/算法学习.md"],
           },
           {
-            text: "算法学习",
-            collapsible: true,
-            // link: "/note/算法学习.md",
-            children: ["/note/算法学习.md"],
-          },
-          {
-            text: "NodeJS学习",
+            text: "全栈能力学习",
             collapsible: true,
             // link: "/note/NodeJS学习.md",
-            children: ["/note/NodeJS学习.md"],
-          },
-          {
-            text: "数据库学习",
-            collapsible: true,
-            // link: "/note/mysql学习.md",
-            children: ["/note/mysql学习.md"],
-          },
-          {
-            text: "Linux学习",
-            collapsible: true,
-            // link: "/note/NodeJS学习.md",
-            children: ["/note/Linux学习.md"],
-          },
-          {
-            text: "Rust学习",
-            collapsible: true,
-            // link: "/note/NodeJS学习.md",
-            children: ["/note/Rust学习.md"],
-          },
+            children: ["/note/NodeJS学习.md", "/note/mysql学习.md", "/note/Linux学习.md", "/note/Rust学习.md"],
+          }
         ],
       },
       {
@@ -146,12 +98,13 @@ export default defineUserConfig({
           {
             text: "代码开发规范",
             collapsible: true,
+            // link: "/note/js代码开发规范.md",
             children: ["/note/js代码开发规范.md"],
           },
         ]
       },
       {
-        text: "工作学习",
+        text: "实战记录",
         collapsible: true,
         children: [
           {
