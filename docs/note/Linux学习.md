@@ -153,3 +153,6 @@ gpasswd -d users daloong
 ```shell
 
 ```
+
+### 查找
+- 查找微信小程序代码总行数：`find . "(" -name "*.json" -or -name "*.js" -or -name "*.wxss"  -or -name "*.wxml" ")" -print | xargs wc -l`
